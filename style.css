@@ -1,0 +1,48 @@
+.container {
+    width: 1920px;
+    margin: auto;
+}
+.header {
+    height: 1045px;
+
+    background-image: url(./pictures/Rectangle\ 3.png);
+    display: flex;
+
+}
+.aside {
+    width: 150px;
+    height: 1045px;
+    background-color: rgba(51, 51, 51, 0.75);
+}
+.header__menu {
+}
+.aside__menu_text {
+    height: 25px;
+    width: 242px;
+    color: #C4C4C4;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    transform: rotate(-90deg);
+}
+.header__menu_links {
+    font-family: 'Open Sans Condensed';
+    margin: 0 255px;
+    width: 1110px;
+    height: 145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    
+}
+.header__menu_phone {
+    border-bottom:  solid 2px #D1A954;
+    margin-left: 78px;
+    
+}
