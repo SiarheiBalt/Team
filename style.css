@@ -4,12 +4,10 @@
 }
 .header {
     height: 1045px;
-
     background-image: url(./pictures/Rectangle\ 3.png);
     display: flex;
-
 }
-.aside {
+.aside { 
     width: 150px;
     height: 1045px;
     background-color: rgba(51, 51, 51, 0.75);
@@ -43,6 +41,32 @@
 }
 .header__menu_phone {
     border-bottom:  solid 2px #D1A954;
-    margin-left: 78px;
-    
+    margin-left: 78px; 
+}
+.poster__title_left {  
+    font-family: Open Sans Condensed;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.poster__text_left {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    width: 540px;
+    height: 79px;
+}
+.poster_left_button button {
+    width: 160px;
+    height: 50px;
+    background-color: #D1A954;
+    border: none;
 }
