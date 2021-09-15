@@ -245,6 +245,14 @@ margin-bottom: 100px;
     height: 550px;
     display: flex;
     justify-content: flex-end;
+    font-family: Open Sans Condensed;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #FFFFFF;
 }
 .main__production_title {
     font-family: Open Sans Condensed;
@@ -264,9 +272,38 @@ margin-bottom: 100px;
 .production_item {
     height: 550px;
     width: 442px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    
 }
-
-
+.production_item_title {
+    margin: 40px;
+}
+.production_item_date {
+    font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0.1em;
+text-align: left;
+transform: rotate(-90deg);
+margin: 0px 0px 86px -13px;
+}
+.production__search {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #D1A954;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search {
+    justify-content: center;
+    align-items: center;
+}
 .main__review {
     width: 1110px;
     height: 550px;
@@ -320,4 +357,63 @@ color: #D1A954;
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
+}
+footer {
+    height: 1220px;
+    background-color: #333333;;
+}
+.partners {
+    padding-top: 150px;
+  
+}
+.partners_title {
+    /* width: 358px; */
+    height: 65px;
+    font-family: Open Sans Condensed;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 65px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #D1A954;
+    margin-bottom: 100px;
+}
+.partners_title::after {
+    content: ' ТЕАТРА';
+    color: #FFFFFF;
+}
+.partners_items {
+    width: 1034px;
+    height: 380px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+}
+.patronage_title {
+    
+    font-family: Open Sans Condensed;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 65px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #D1A954;
+}
+.patronage_title::after{
+    color: #FFFFFF;
+    content: 'МЕЦЕНАТОМ';
+}
+.patronage__info li {
+    font-family: Open Sans Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #FFFFFF;
+    list-style-type: none;
+    margin-bottom: 25px;
 }
