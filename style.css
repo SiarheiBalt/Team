@@ -405,9 +405,14 @@ footer {
     color: #FFFFFF;
     content: 'МЕЦЕНАТОМ';
 }
+.patronage__content {
+    display: flex;
+    justify-content: space-around;
+
+}
 .patronage__info li {
     font-family: Open Sans Condensed;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
@@ -416,4 +421,31 @@ footer {
     color: #FFFFFF;
     list-style-type: none;
     margin-bottom: 25px;
+}
+.patronage__content input {
+    border: 1px solid #616161;
+    background-color: #444444;
+    width: 180px;
+    height: 35px;
+}
+.user__info_form {
+    height: 100px;
+    width: 390px;
+}
+.user__info_text {
+    font-family: Open Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+
+    color: #989898;
+    width: 390px;
+    height: 50px;
+}
+.patronage__send_form input {
+    width: 310px;
+    height: 100px;
 }
