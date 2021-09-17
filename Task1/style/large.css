@@ -1,0 +1,13 @@
+@media (max-width: 1090px) {
+    body {
+        max-width: 992px;
+    }
+    .header__menu_phone {
+        position: absolute;
+        top: 13%;
+        left: 33%;
+    }
+    .poster_right {
+        position: absolute;
+    }
+}

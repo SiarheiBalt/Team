@@ -1,0 +1,266 @@
+body {
+    max-width: 1920px;
+    margin: auto;
+}
+.wrapper {
+    background-color: #333333;
+}
+.container {
+    max-width: 58%;
+    margin: auto;
+}
+header {
+    height: 1045px;
+    background-image: url('./../pictures/Headerback.png');
+    background-size: cover;
+}
+.header__menu_links {
+    height: 127px;
+    margin: auto;
+    font-family: 'Open Sans Condensed';
+    color: #FFFFFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.1em; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__menu_phone {
+    border-bottom:  solid 2px #D1A954;
+    margin-left: 75px;
+}
+.aside {
+    max-width: 150px;
+    height: 1045px;
+    background-color: rgba(51, 51, 51, 0.75);
+    position: absolute;
+}
+.aside__menu {
+    height: 600px;
+    margin-top: 385px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.aside__menu_line {
+    height: 80px;
+    width: 3px;
+    border-right: 3px solid #C4C4C4;
+}
+.aside__menu_text {
+    font-family: Open Sans Condensed;
+    height: 25px;
+    width: 242px;
+    color: #C4C4C4;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    font-size: 25px;
+    transform: rotate(-90deg);
+    margin-bottom: 90px;
+}
+.posters {
+    max-width: 94%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13%;
+}
+.poster_left {
+    height: 296px;
+    max-width: 51%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 11%;
+}
+.poster__title_left {  
+    font-family: Open Sans Condensed;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: #FFFFFF;
+}
+.poster__text_left {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    /* width: 530px; */
+    height: 79px;
+}
+.poster_left_button button {
+    width: 160px;
+    height: 50px;
+    background-color: #D1A954;
+    border: none;
+    font-family: Open Sans Condensed;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.poster_right {
+    max-width: 370px;
+    height: 560px;
+}
+.poster__image {
+    height: 510px;
+    position: relative;
+}
+.poster__image_back {
+    position: inherit;
+}
+.poster__image_back img{
+    width: 10%;
+}
+.poster__image_face {
+    margin: -475px 0px 0px 20px;
+    
+}
+.poster__pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+}
+.poster__arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.poster__arrow img {
+    width: 40px;
+    height: 15px;
+    margin-top: 5px;
+}
+.poster__arrow div {
+    font-family: Open Sans Condensed;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color:#C4C4C4;
+}
+.about {
+    height: 922px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.about__title {
+    color: #D1A954;
+    font-family: Open Sans Condensed;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 65px;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+}
+.about__title::after {
+    content: ' ТЕАТРЕ';
+    color: #FFFFFF;
+}
+.about__container {
+    height: 292px;
+    display: flex;
+    justify-content: space-between;
+}
+.about__description_title {
+    font-family: Open Sans Condensed;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+.about__description_text {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    max-width: 445px;
+    height: 210px;
+}
+.about__numbers {
+    max-width: 255px;
+    font-family: Open Sans Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about__info {
+    height: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about__numbers img {
+    width: 70px;
+    height: 70px;
+}
+.about__numbers_title{
+    color: #FFFFFF;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+}
+.about__numbers_seats {
+    color: #D1A954;
+}
+.about__numbers_seats::after {
+    content: 'посадочных мест';
+    color: #FFFFFF;
+}
+.about__numbers_history {  
+    color: #D1A954;
+}
+.about__numbers_history::after {
+    color: #FFFFFF;
+    content:  'лет истории';
+}
+.about_img img {
+    max-width: 100%;
+}
+.main__production_title {
+    font-family: Open Sans Condensed;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 65px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #D1A954;
+}
+.main__production_title::after {
+    content: ' ПОСТАНОВКИ';
+    color: #FFFFFF;
+}
