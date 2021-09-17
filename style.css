@@ -2,6 +2,12 @@ body {
     max-width: 1920px;
     margin: auto;
 }
+.menu_small {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
 .menu__links {
     display: none;
 }
@@ -101,7 +107,7 @@ body {
     line-height: 21px;
     letter-spacing: 0em;
     color: #FFFFFF;
-    width: 540px;
+    width: 526px;
     height: 79px;
 }
 .poster_left_button button {
@@ -221,6 +227,12 @@ margin-bottom: 100px;
     line-height: 22px;
     letter-spacing: 0.05em;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about__info {
+    height: 216px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -684,5 +696,39 @@ footer {
     .about__container {
         flex-direction: column;
         align-items: center;
+    }
+    .menu_small {
+        display: block;
+    }
+    .poster_left {
+        margin: 10px 0 0 37px;
+    }
+    .about__description_title {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .about__info {
+        flex-direction: row;
+    }
+    .main__review_years {
+        margin-left: 33px;
+    }
+    .main__review__content {
+        width: 335px;
+    }
+    .partners_items {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 50px;
+    }
+    .patronage__send_form {
+        align-items: center;
+        margin-top: 20px;
+    }
+    .user_form {
+        display: block;
+    }
+    .footer_end {
+        max-width: 545px;
     }
 }
