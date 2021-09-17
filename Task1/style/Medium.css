@@ -1,0 +1,89 @@
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    .aside {
+        display: none;
+    }
+    header {
+        height: 800px;
+    }
+    .header__menu_phone {
+        position: absolute;
+        top: 3%;
+        left: unset;
+        right: 4%;
+    }
+    .header__menu_links {
+        display: block;
+    }
+    .menu__links {
+        position: absolute;
+        display: block;
+        width: 300px;
+        height: 800px;
+        background-color: #333333;
+    }
+    
+    .header__menu_links_medium {
+        font-family: Open Sans Condensed;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        height: 315px;
+        justify-content: space-between;
+        margin-left: 40px;
+    }
+    .header__menu_phone_medium {
+        position: absolute;
+        border-bottom:  solid 2px #D1A954;
+        font-family: 'Open Sans Condensed';
+        display: flex;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+        right: 40px;
+        top: 56px;
+    }
+    .menu__sosial_link div {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu__sosial_link {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 165px;
+        width: 165px;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    .header_medium_button button {
+        border: none;
+        background-color: #333333;
+        margin: 33px;
+    }
+    .header_medium_button {
+        height: 152px;
+        display: flex;
+        justify-content: end;
+        align-items: flex-start;
+    }
+    .menu__social_medium {
+        height: 330px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

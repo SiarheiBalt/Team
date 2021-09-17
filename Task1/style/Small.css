@@ -1,0 +1,14 @@
+@media (max-width: 576px) {
+    body {
+        max-width: 576px;
+    }
+    .menu__links {
+        display: none;
+    }
+    .header__menu_links div {
+        display: none;
+    }
+    .menu_small {
+        display: block;
+    }
+}

@@ -4,10 +4,31 @@
     }
     .header__menu_phone {
         position: absolute;
-        top: 13%;
+        top: 16%;
         left: 33%;
     }
     .poster_right {
-        position: absolute;
+        display: none;
+    }
+    .posters {
+        display: block;
+        max-width: 100%;
+        margin-top: 38%;
+    }
+    .poster_left {
+        max-width: 90%;
+    } 
+    .container {
+        max-width: 64%;
+    }
+    .about_img {
+        display: none;
+    }
+    .about__description {
+        width: 65%;
+
+    }
+    .aside {
+        max-width: 14.5%;
     }
 }

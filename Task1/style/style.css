@@ -8,6 +8,16 @@ body {
 .container {
     max-width: 58%;
     margin: auto;
+    height: 100%;
+}
+.menu__links {
+    display: none;
+}
+.menu_small {
+    display: none;
+    position: absolute;
+    top: 3%;
+    left: 5%;
 }
 header {
     height: 1045px;
