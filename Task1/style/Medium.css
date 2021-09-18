@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
   .container {
-    max-width: 90%;
+    max-width: 100%;
+    margin: 0 5%;
   }
   .aside {
     display: none;
@@ -88,5 +89,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .main__production {
+    margin: 0 5%;
   }
 }
