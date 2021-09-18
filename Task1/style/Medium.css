@@ -93,4 +93,21 @@
   .main__production {
     margin: 0 5%;
   }
+  .review__container {
+    height: 670px;
+  }
+  .main__review {
+    width: 768px;
+  }
+  .review__content_text {
+    font-size: 29px;
+    line-height: 43.5px;
+    max-width: 338px;
+  }
+  .partners {
+    height: 488px;
+  }
+  .partners_items {
+    column-gap: 80px;
+  }
 }

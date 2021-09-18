@@ -328,3 +328,89 @@ header {
   justify-content: center;
   align-items: center;
 }
+.review__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 850px;
+}
+.main__review {
+  width: 1110px;
+  height: 550px;
+  background-image: url("./../pictures/Reviewback.png");
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main__review_years {
+  height: 850px;
+  max-width: 140px;
+  height: 298px;
+  margin-left: 8%;
+}
+.main__review_years div {
+  font-family: Open Sans Condensed;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 98px;
+  letter-spacing: 0.1em;
+  color: #d1a954;
+}
+.main__review__content {
+  max-width: 565px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.review__content_stars {
+  width: 230px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.review__content_stars img {
+  width: 24px;
+  height: 26px;
+}
+.review__content_text {
+  max-width: 540px;
+  height: 149px;
+  font-family: Open Sans;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.partners {
+  height: 557px;
+}
+.partners_title {
+  font-family: Open Sans Condensed;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 65px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #d1a954;
+}
+.partners_title::after {
+  content: " ТЕАТРА";
+  color: #ffffff;
+}
+.partners_items {
+  height: 278px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 80px;
+  width: 100%;
+  column-gap: 100px;
+  overflow: hidden;
+  margin-top: 9%;
+}

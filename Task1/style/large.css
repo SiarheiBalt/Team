@@ -34,4 +34,12 @@
   .main__production {
     margin: 0px 9% 0 17%;
   }
+  .main__review {
+    width: 992px;
+  }
+  .review__content_text {
+    font-size: 34px;
+    line-height: 51px;
+    max-width: 450px;
+  }
 }

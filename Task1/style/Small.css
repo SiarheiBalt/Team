@@ -50,4 +50,18 @@
   .main__production {
     margin: 0 4%;
   }
+  .main__review {
+    width: 576px;
+  }
+  .review__content_text {
+    font-size: 25px;
+    line-height: 37.5px;
+    max-width: 330px;
+  }
+  .main__review_years {
+    margin-left: 4%;
+  }
+  .review__container {
+    height: 650px;
+  }
 }
