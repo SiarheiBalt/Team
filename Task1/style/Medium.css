@@ -110,4 +110,13 @@
   .partners_items {
     column-gap: 80px;
   }
+  .patronage {
+    height: 494px;
+  }
+  .patronage__info {
+    column-count: 2;
+  }
+  .patronage_title {
+    margin-bottom: 60px;
+  }
 }

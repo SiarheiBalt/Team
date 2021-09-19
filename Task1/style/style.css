@@ -104,10 +104,9 @@ header {
   line-height: 21px;
   letter-spacing: 0em;
   color: #ffffff;
-  /* width: 530px; */
   height: 79px;
 }
-.poster_left_button button {
+.button button {
   width: 160px;
   height: 50px;
   background-color: #d1a954;
@@ -413,4 +412,100 @@ header {
   column-gap: 100px;
   overflow: hidden;
   margin-top: 9%;
+}
+.patronage {
+  height: 435px;
+}
+.patronage_title {
+  font-family: Open Sans Condensed;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 65px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #d1a954;
+  margin-bottom: 100px;
+}
+.patronage_title::after {
+  color: #ffffff;
+  content: " МЕЦЕНАТОМ";
+}
+.patronage__info li {
+  height: 17px;
+  font-family: Open Sans Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #ffffff;
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+.user__form {
+  width: 730px;
+}
+.patronage__content {
+  display: flex;
+  justify-content: space-between;
+}
+.user__form__name_input,
+.user__form__company_input,
+.user__form__phone_input,
+.user__form__mail_input {
+  border: 1px solid #616161;
+  background-color: #444444;
+  width: 100%;
+  height: 35px;
+}
+.user__form__message_input {
+  border: 1px solid #616161;
+  background-color: #444444;
+  width: 310px;
+  height: 99px;
+}
+.user__form_inputs {
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "d f c";
+  row-gap: 25px;
+  justify-content: space-between;
+}
+.user__form__name_input {
+  grid-area: a;
+}
+.user__form__company_input {
+  grid-area: b;
+}
+.user__form__phone_input {
+  grid-area: d;
+}
+.user__form__mail_input {
+  grid-area: f;
+}
+.user__form__message_input {
+  grid-area: c;
+}
+.user__form_submit button {
+  width: 190px;
+}
+.user__form_submit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.user__form_submit_text {
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #989898;
+  max-width: 350px;
+  height: 50px;
 }

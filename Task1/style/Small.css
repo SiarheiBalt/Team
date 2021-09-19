@@ -64,4 +64,40 @@
   .review__container {
     height: 650px;
   }
+  .patronage {
+    height: 694px;
+  }
+  .patronage_title {
+    margin-bottom: 50px;
+  }
+  .user__form_inputs {
+    grid-template-areas:
+      "a b "
+      "d f "
+      "c c";
+  }
+  .user__form__message_input {
+    width: 99%;
+  }
+  .user__form__name_input,
+  .user__form__company_input,
+  .user__form__phone_input,
+  .user__form__mail_input {
+    width: 98%;
+  }
+  .user__form_inputs {
+    grid-template-columns: 45% 45%;
+  }
+  .user__form_submit {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .user__form_submit_text {
+    max-width: 435px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .patronage__info {
+    margin-top: 50px;
+  }
 }

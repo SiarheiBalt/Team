@@ -42,4 +42,21 @@
     line-height: 51px;
     max-width: 450px;
   }
+  .patronage {
+    height: 574px;
+  }
+  .patronage__content {
+    flex-direction: column-reverse;
+  }
+  .user__form {
+    width: 100%;
+  }
+  .patronage__info {
+    column-count: 2;
+    margin-top: 80px;
+  }
+  .patronage__info li:nth-child(3),
+  .patronage__info li:nth-child(4) {
+    text-align: end;
+  }
 }
