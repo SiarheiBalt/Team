@@ -12,14 +12,22 @@
   .about {
     height: 722px;
   }
-  .header__phone {
+  .phone-text {
     position: absolute;
     top: 3%;
     left: unset;
     right: 4%;
-  } 
+  }
+  .button {
+    visibility: hidden;
+  }
+
   .header__links {
     display: block;
+    visibility: hidden;
+  }
+  .phone-text {
+    visibility: initial;
   }
   .menu-links {
     position: absolute;
@@ -57,7 +65,7 @@
     right: 40px;
     top: 56px;
   }
-  .social__img_cover {
+  .menu__social-link__img_cover {
     width: 70px;
     height: 70px;
     display: flex;
@@ -90,13 +98,13 @@
     align-items: center;
     justify-content: center;
   }
-  .main__production {
+  .production {
     margin: 0 5%;
   }
   .review-container {
     height: 670px;
   }
-  .main__review {
+  .review {
     width: 768px;
   }
   .review__content_text {
@@ -113,10 +121,10 @@
   .patronage {
     height: 494px;
   }
-  .patronage__info {
+  .patronage__content__info {
     column-count: 2;
   }
-  .patronage_title {
+  .patronage__title {
     margin-bottom: 60px;
   }
 }

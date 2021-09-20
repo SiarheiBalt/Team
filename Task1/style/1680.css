@@ -1,17 +1,21 @@
 @media (max-width: 1680px) {
-    .content-container {
-        max-width:  69%;
-    }
-    .poster__left {
-        height: 375px;
-    }
-    .header__links  {
-        font-size: 15px;
-    }
-    .header__phone {
-        margin-left: 10px;
-    }
-    .about__description_text {
-        margin-right: 10px;
-    }
+  .content-container {
+    max-width: 69%;
+  }
+  .poster-left {
+    height: 415px;
+    margin-right: 20px;
+  }
+  .header__links {
+    font-size: 15px;
+  }
+  .phone-text {
+    margin-left: 10px;
+  }
+  .about__description__text {
+    margin-right: 10px;
+  }
+  .about-numbers {
+    margin-right: 5px;
+  }
 }

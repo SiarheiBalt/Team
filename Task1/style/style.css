@@ -40,7 +40,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.header__phone {
+.phone-text {
   border-bottom: solid 2px #d1a954;
   margin-left: 102px;
   font-size: 14px;
@@ -52,7 +52,7 @@ aside {
   position: absolute;
 }
 .aside-menu_space {
-  width: 350px
+  width: 350px;
 }
 .aside-menu {
   height: 600px;
@@ -87,7 +87,7 @@ aside {
   justify-content: space-between;
   margin-top: 12.7%;
 }
-.poster__left {
+.poster-left {
   height: 282px;
   max-width: 51%;
   display: flex;
@@ -95,14 +95,14 @@ aside {
   justify-content: space-between;
   margin-top: 12.4%;
 }
-.poster__title_left {
+.poster-left__title {
   font-family: Open Sans Condensed;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
-.poster__text_left {
+.poster-left__text {
   font-family: Open Sans;
   font-size: 14px;
   font-style: normal;
@@ -123,41 +123,44 @@ aside {
   letter-spacing: 0.1em;
   color: #ffffff;
 }
-.poster_right {
+.user-form__button button {
+  width: 190px;
+}
+.poster-right {
   max-width: 370px;
   height: 560px;
 }
-.poster__image {
+.poster-right__images {
   height: 510px;
   position: relative;
 }
-.poster__image_back {
+.poster-right__images_back {
   position: inherit;
 }
-.poster__image_back img {
+.poster-right__images_back img {
   width: 10%;
 }
-.poster__image_face {
+.poster-right__images_face {
   margin: -475px 0px 0px 20px;
 }
-.poster__pagination {
+.pagination {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 85px;
 }
-.poster__arrow {
+.pagination__arrow {
   display: flex;
   justify-content: space-between;
   width: 100px;
 }
 
-.poster__arrow img {
+.pagination__arrow img {
   width: 40px;
   height: 15px;
   margin-top: 5px;
 }
-.poster__arrow div {
+.pagination__arrow span {
   font-family: Open Sans Condensed;
   font-size: 18px;
   font-style: normal;
@@ -183,16 +186,16 @@ aside {
   text-align: center;
   color: #d1a954;
 }
-.about__title::after {
-  content: " ТЕАТРЕ";
-  color: #ffffff;
-}
 .about__container {
   height: 292px;
   display: flex;
   justify-content: space-between;
 }
-.about__description_title {
+.about__description {
+  display: flex;
+  flex-direction: column;
+}
+.about__description__title {
   font-family: Open Sans Condensed;
   font-size: 21px;
   font-style: normal;
@@ -202,7 +205,7 @@ aside {
   text-align: left;
   margin-bottom: 40px;
 }
-.about__description_text {
+.about__description__text {
   font-family: Open Sans;
   font-size: 14px;
   font-style: normal;
@@ -212,7 +215,7 @@ aside {
   max-width: 445px;
   height: 210px;
 }
-.about__numbers {
+.about-numbers {
   max-width: 255px;
   font-family: Open Sans Condensed;
   font-size: 16px;
@@ -225,38 +228,35 @@ aside {
   flex-direction: column;
   justify-content: space-between;
 }
-.about__info {
+.about-numbers__info {
   height: 216px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.about__numbers img {
+.about-numbers img {
   width: 70px;
   height: 70px;
 }
-.about__numbers_title {
+.about-numbers__title {
   font-size: 21px;
   font-style: normal;
   font-weight: 700;
   line-height: 29px;
   letter-spacing: 0.1em;
 }
-.about__numbers_seats {
+.about-numbers__info_right {
+  display: flex;
+  flex-direction: column;
+}
+.about-numbers__info__text {
+  color: #d1a954;
+  margin-top: 5px;
+}
+.about-numbers__info__text {
   color: #d1a954;
 }
-.about__numbers_seats::after {
-  content: " посадочных мест";
-  color: #ffffff;
-}
-.about__numbers_history {
-  color: #d1a954;
-}
-.about__numbers_history::after {
-  color: #ffffff;
-  content: " лет истории";
-}
-.about_img img {
+.about__img img {
   max-width: 100%;
 }
 .main__production_title {
@@ -269,12 +269,8 @@ aside {
   text-align: center;
   color: #d1a954;
 }
-.main__production_title::after {
-  content: " ПОСТАНОВКИ";
-  color: #ffffff;
-}
 
-.main__production {
+.production {
   overflow: hidden;
   margin: 0 0 0 150px;
 }
@@ -290,7 +286,7 @@ aside {
   text-align: left;
   display: flex;
 }
-.production_item {
+.production__item {
   height: 550px;
   width: 442px;
   display: flex;
@@ -298,11 +294,23 @@ aside {
   align-items: flex-start;
   justify-content: space-between;
 }
-.production_item_title {
+.production__item_background1 {
+  background-image: url(./../pictures/production/production1.png);
+}
+.production__item_background2 {
+  background-image: url(./../pictures/production/production2.png);
+}
+.production__item_background3 {
+  background-image: url(./../pictures/production/production3.png);
+}
+.production__item_background4 {
+  background-image: url(./../pictures/production/production4.png);
+}
+.production__item__title {
   margin: 39px;
   width: 100%;
 }
-.production_item_date {
+.production__item__date {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -333,7 +341,7 @@ aside {
   justify-content: center;
   height: 850px;
 }
-.main__review {
+.review {
   width: 1110px;
   height: 550px;
   background-image: url("./../pictures/reviewBack.png");
@@ -342,13 +350,13 @@ aside {
   justify-content: space-around;
   align-items: center;
 }
-.main__review_years {
+.review__years {
   height: 850px;
   max-width: 140px;
   height: 298px;
   margin-left: 10%;
 }
-.main__review_years span {
+.review__year {
   font-family: Open Sans Condensed;
   font-size: 72px;
   font-style: normal;
@@ -357,20 +365,20 @@ aside {
   letter-spacing: 0.1em;
   color: #d1a954;
 }
-.main__review__content {
+.review__content {
   max-width: 565px;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.review__content_stars {
+.review__content__stars {
   width: 230px;
   height: 24px;
   display: flex;
   justify-content: space-between;
 }
-.review__content_stars img {
+.rewiew__img {
   width: 24px;
   height: 26px;
 }
@@ -388,7 +396,7 @@ aside {
 .partners {
   height: 557px;
 }
-.partners_title {
+.partners__title {
   font-family: Open Sans Condensed;
   font-size: 48px;
   font-style: normal;
@@ -397,10 +405,6 @@ aside {
   letter-spacing: 0.1em;
   text-align: center;
   color: #d1a954;
-}
-.partners_title::after {
-  content: " ТЕАТРА";
-  color: #ffffff;
 }
 .partners_items {
   height: 278px;
@@ -415,7 +419,7 @@ aside {
 .patronage {
   height: 435px;
 }
-.patronage_title {
+.patronage__title {
   font-family: Open Sans Condensed;
   font-size: 48px;
   font-style: normal;
@@ -426,11 +430,7 @@ aside {
   color: #d1a954;
   margin-bottom: 100px;
 }
-.patronage_title::after {
-  color: #ffffff;
-  content: " МЕЦЕНАТОМ";
-}
-.patronage__info li {
+.patronage__li {
   height: 17px;
   font-family: Open Sans Condensed;
   font-size: 16px;
@@ -443,29 +443,29 @@ aside {
   list-style-type: none;
   margin-bottom: 25px;
 }
-.user__form {
+.user-form {
   width: 730px;
 }
 .patronage__content {
   display: flex;
   justify-content: space-between;
 }
-.user__form__name_input,
-.user__form__company_input,
-.user__form__phone_input,
-.user__form__mail_input {
+.user-form__input__name,
+.user-form__input__company,
+.user-form__input__phone,
+.user-form__input__mail {
   border: 1px solid #616161;
   background-color: #444444;
-  width: 90%;
+  width: 95%;
   height: 35px;
 }
-.user__form__message_input {
+.user-form__input__message {
   border: 1px solid #616161;
   background-color: #444444;
   width: 310px;
   height: 99px;
 }
-.user__form_inputs {
+.user-form__inputs {
   display: grid;
   grid-template-areas:
     "a b c"
@@ -473,40 +473,40 @@ aside {
   row-gap: 25px;
   justify-content: space-between;
 }
-.user__form_inputs input {
+.user-form__inputs input {
   font-family: Open Sans;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #989898;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #989898;
 }
-.user__form__name_input {
+.user-form__input__name {
   grid-area: a;
 }
-.user__form__company_input {
+.user-form__input__company {
   grid-area: b;
 }
-.user__form__phone_input {
+.user-form__input__phone {
   grid-area: d;
 }
-.user__form__mail_input {
+.user-form__input__mail {
   grid-area: f;
 }
-.user__form__message_input {
+.user-form__input__message {
   grid-area: c;
 }
 .user__form_submit button {
   width: 190px;
 }
-.user__form_submit {
+.user-form_bottom {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
 }
-.user__form_submit_text {
+.user-form__text__text_bottom {
   font-family: Open Sans;
   font-size: 12px;
   font-style: normal;
@@ -518,13 +518,13 @@ aside {
   max-width: 350px;
   height: 50px;
 }
-.footer {
+footer {
   height: 79px;
 }
-.footer_line {
+.footer__line {
   border-top: 1px solid #565656;
 }
-.footer_text {
+.footer__text {
   height: 78px;
   font-family: Open Sans;
   font-size: 12px;

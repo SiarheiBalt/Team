@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/1680.css">
+    <link rel="stylesheet" href="./style/1680.css" />
     <link rel="stylesheet" href="./style/1090.css" />
     <link rel="stylesheet" href="./style/768.css" />
     <link rel="stylesheet" href="./style/576.css" />
@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link 
+    <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
@@ -31,7 +31,7 @@
       <div class="menu-links">
         <div class="menu-links__form">
           <button class="menu-links__form_submit">
-            <img src="./pictures/closeButton.png" />
+            <img src="./pictures/closeButton.png" alt="Закрыть" />
           </button>
         </div>
         <div class="menu-links__header_medium">
@@ -43,37 +43,34 @@
         </div>
         <div class="menu__social_medium">
           <div class="menu__sosial-link">
-            <div class="social__img_cover"><img src="./pictures/socialMedium/facebook.png" alt="Facebook" /></div>
-            <div class="social__img_cover">
-              <img src="./pictures/socialMedium/instagram.png" alt="Instagram" />
+            <div class="menu__social-link__img_cover">
+              <img src="./pictures/socialMedium/facebook.png" alt="Facebook" />
             </div>
-            <div class="social__img_cover"><img src="./pictures/socialMedium/youtube.png" alt="Youtube" /></div>
-            <div class="social__img_cover"><img src="./pictures/socialMedium/vk.png" alt="VK" /></div>
+            <div class="menu__social-link__img_cover">
+              <img
+                src="./pictures/socialMedium/instagram.png"
+                alt="Instagram"
+              />
+            </div>
+            <div class="menu__social-link__img_cover">
+              <img src="./pictures/socialMedium/youtube.png" alt="Youtube" />
+            </div>
+            <div class="menu__social-link__img_cover">
+              <img src="./pictures/socialMedium/vk.png" alt="VK" />
+            </div>
           </div>
         </div>
       </div>
 
       <aside>
         <div class="aside-menu">
-          <div class="aside-menu_space "></div>
-          <div class="aside__text">контактная информация</div>
+          <div class="aside-menu_space"></div>
+          <span class="aside__text">контактная информация</span>
           <div class="aside__line"></div>
-          <img
-            src="./pictures/instagram.png"
-            alt="Facebook"
-          />
-          <img
-            src="./pictures/facebook.png"
-            alt="Instagram"
-          />
-          <img
-            src="./pictures/vk.png"
-            alt="VK"
-          />
-          <img
-            src="./pictures/youtube.png"
-            alt="Youtube"
-          />
+          <img src="./pictures/instagram.png" alt="Facebook" />
+          <img src="./pictures/facebook.png" alt="Instagram" />
+          <img src="./pictures/vk.png" alt="VK" />
+          <img src="./pictures/youtube.png" alt="Youtube" />
         </div>
       </aside>
       <header>
@@ -84,12 +81,12 @@
             <span>НАШИ ПОСТАНОВКИ</span>
             <span>ПАРТНЕРЫ ТЕАТРА</span>
             <span>КОНТАКТЫ</span>
-            <span class="header__phone text_white">+7 495 123-45-67</span>
+            <span class="phone-text text_white">+7 495 123-45-67</span>
           </div>
           <div class="posters">
-            <div class="poster__left">
-              <h1 class="poster__title_left text_white">БОЛЬШОЙ ТЕАТР</h1>
-              <div class="poster__text_left text_white">
+            <div class="poster-left">
+              <h1 class="poster-left__title text_white">БОЛЬШОЙ ТЕАТР</h1>
+              <div class="poster-left__text text_white">
                 Большо́й теа́тр — петербургский театр, существовавший в 1784—1886
                 годах, с 1886 года — Петербургская консерватория. Первое
                 постоянное в Санкт-Петербурге, крупнейшее в России и одно из
@@ -97,25 +94,25 @@
               </div>
               <div class="button text_white"><button>АФИША</button></div>
             </div>
-            <div class="poster_right">
-              <div class="poster__image">
+            <div class="poster-right">
+              <div class="poster-right__images">
                 <img
-                  class="poster__image_back"
+                  class="poster-right__images_back"
                   src="./pictures/posterFace.png"
                 />
                 <img
-                  class="poster__image_face"
+                  class="poster-right__images_face"
                   src="./pictures/posterBack.png"
                 />
               </div>
-              <div class="poster__pagination">
-                <div class="poster__arrow">
-                  <img src="./pictures/arrowLeft.png" />
-                  <div>ПРЕД</div>
+              <div class="pagination">
+                <div class="pagination__arrow">
+                  <img src="./pictures/arrowLeft.png" alt="Пред" />
+                  <span class="pagination__text">ПРЕД</span>
                 </div>
-                <div class="poster__arrow">
-                  <div>ПРЕД</div>
-                  <img src="./pictures/arrowRight.png" />
+                <div class="pagination__arrow">
+                  <span class="pagination__text">ПРЕД</span>
+                  <img src="./pictures/arrowRight.png" alt="Пред" />
                 </div>
               </div>
             </div>
@@ -125,13 +122,15 @@
       <main>
         <div class="content-container">
           <div class="about">
-            <div class="about__title">О</div>
+            <div class="about__title">
+              О <span class="text_white">ТЕАТРЕ</span>
+            </div>
             <div class="about__container">
               <div class="about__description">
-                <span class="about__description_title text_white">
+                <span class="about__description__title text_white">
                   САМЫЙ ЛУЧШИЙ ТЕАТР СПБ
                 </span>
-                <div class="about__description_text text_white">
+                <span class="about__description__text text_white">
                   Как свидетельствуют архивные документы, первое каменное здание
                   Большого театра начали возводить в 1775 году по проекту
                   Антонио Ринальди. В дальнейшем, после того как Ринальди упал с
@@ -142,86 +141,78 @@
                   Деденёвым. Открытие его состоялось в 1783 году, хотя,
                   основываясь на других свидетельствах, годом открытия можно
                   считать 1784 год.
+                </span>
+              </div>
+              <div class="about-numbers">
+                <span class="about-numbers__title text_white"
+                  >НЕМНОГО О ЦИФРАХ</span
+                >
+                <div class="about-numbers__info">
+                  <div class="about-numbers__info_right">
+                    <img src="./pictures/armchair.png" />
+                    <span class="about-numbers__info__text"
+                      >1600
+                      <span class="text_white"> посадочных мест</span></span
+                    >
+                  </div>
+                  <div class="about-numbers__info_right">
+                    <img src="./pictures/theater.png" />
+                    <span class="about-numbers__info__text"
+                      >350 <span class="text_white"> лет истории</span></span
+                    >
+                  </div>
                 </div>
               </div>
-              <div class="about__numbers">
-                <span class="about__numbers_title text_white">НЕМНОГО О ЦИФРАХ</span>
-                <div class="about__info">
-                  <div>
-                    <img src="./pictures/armchair.png"/>
-                    <span class="about__numbers_seats">1600</span>
-                  </div>
-                  <div>
-                    <img src="./pictures/theater.png"/>
-                    <span class="about__numbers_history">350</span>
-                  </div>
-                </div>
-              </div>
-              <div class="about_img">
-                <img src="./pictures/theaterAbout.png"/>
+              <div class="about__img">
+                <img
+                  class="about__img__picture"
+                  src="./pictures/theaterAbout.png"
+                />
               </div>
             </div>
-            <span class="main__production_title">НАШИ</span>
+            <span class="main__production_title"
+              >НАШИ <span class="text_white">ПОСТАНОВКИ</span></span
+            >
           </div>
         </div>
       </main>
       <main>
-        <div class="main__production">
+        <div class="production">
           <div class="prodiction__content text_white">
-            <div
-              class="production_item"
-              style="
-                background-image: url('./pictures/production/production1.png');
-              "
-            >
-              <span class="production_item_title">ОСКАР 2020</span>
-              <span class="production_item_date">СЕНТЯБРЬ 2020</span>
+            <div class="production__item production__item_background1">
+              <span class="production__item__title">ОСКАР 2020</span>
+              <span class="production__item__date">СЕНТЯБРЬ 2020</span>
             </div>
-            <div
-              class="search production_item"
-              style="
-                background-image: url('./pictures/production/production2.png');
-              "
-            >
+            <div class="search production__item production__item_background2">
               <div class="production__search">
                 <img src="./pictures/Search.png" alt="" />
               </div>
             </div>
-            <div
-              class="production_item"
-              style="
-                background-image: url('./pictures/production/production3.png');
-              "
-            >
-              <span class="production_item_title">ЗОЛОТОЙ ГРАМОФОН</span>
-              <span class="production_item_date">ИЮЛЬ 2020</span>
+            <div class="production__item production__item_background3">
+              <span class="production__item__title">ЗОЛОТОЙ ГРАМОФОН</span>
+              <span class="production__item__date">ИЮЛЬ 2020</span>
             </div>
-            <div
-              class="production_item"
-              style="
-                background-image: url('./pictures/production/production4.png');
-              "
-            >
-              <span class="production_item_title">ЩЕЛКУНЧИК</span>
-              <span class="production_item_date">МАЙ 2020</span>
+            <div class="production__item production__item_background4">
+              <span class="production__item__title">ЩЕЛКУНЧИК</span>
+              <span class="production__item__date">МАЙ 2020</span>
             </div>
           </div>
         </div>
       </main>
       <main class="review-container">
-        <div class="main__review">
-          <div class="main__review_years">
-            <span>2018</span>
-            <span>2019</span>
-            <span>2020</span>
+        <div class="review">
+          <div class="review__years">
+            <span class="review__year">2018</span>
+            <span class="review__year">2019</span>
+            <span class="review__year">2020</span>
           </div>
-          <div class="main__review__content">
-            <div class="review__content_stars">
-              <img src="./pictures/star.png" />
-              <img src="./pictures/star.png" />
-              <img src="./pictures/star.png"  />
-              <img src="./pictures/star.png"  />
-              <img src="./pictures/star.png" />
+          <div class="review__content">
+            <div class="review__content__stars">
+              <img class="rewiew__img" src="./pictures/star.png" />
+              <img class="rewiew__img" src="./pictures/star.png" />
+              <img class="rewiew__img" src="./pictures/star.png" />
+              <img class="rewiew__img" src="./pictures/star.png" />
+              <img class="rewiew__img" src="./pictures/star.png" />
             </div>
             <span class="review__content_text text_white">
               Лучший театр по мнению театральных критиков Парижа
@@ -231,90 +222,114 @@
       </main>
       <main class="partners">
         <div class="content-container">
-          <h2 class="partners_title">ПАРТНЕРЫ</h2>
+          <h2 class="partners__title">
+            ПАРТНЕРЫ <span class="text_white">ТЕАТРА</span>
+          </h2>
           <div class="partners_items">
-            <div class="partners_item">
-              <img src="./pictures/partnersLogo.png" alt="Наши партнеры"/>
-            </div>
-            <div class="partners_item">
-              <img src="./pictures/partnersLogo.png"  alt="Наши партнеры"/>
-            </div>
-            <div class="partners_item">
-              <img src="./pictures/partnersLogo.png" alt="Наши партнеры"/>
-            </div>
-            <div class="partners_item">
-              <img src="./pictures/partnersLogo.png"  alt="Наши партнеры"/>
-            </div>
-            <div class="partners_item">
-              <img src="./pictures/partnersLogo.png" alt="Наши партнеры"/>
-            </div>
-            <div class="partners_item">
-              <img src="./pictures/partnersLogo.png" alt="Наши партнеры"/>
-            </div>
-            <div class="partners_item partners_item_end">
-              <img src="./pictures/partnersLogo.png" alt="Наши партнеры"/>
-            </div>
-            <div class="partners_item partners_item_end">
-              <img src="./pictures/partnersLogo.png" alt="Наши партнеры"/>
-            </div>
+            <img
+              class="partners_item"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
+            <img
+              class="partners_item"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
+            <img
+              class="partners_item"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
+            <img
+              class="partners_item"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
+            <img
+              class="partners_item"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
+            <img
+              class="partners_item"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
+            <img
+              class="partners_item partners_item_end"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
+            <img
+              class="partners_item partners_item_end"
+              src="./pictures/partnersLogo.png"
+              alt="Наши партнеры"
+            />
           </div>
         </div>
       </main>
       <main class="patronage">
         <div class="content-container">
-          <h2 class="patronage_title">СТАТЬ</h2>
+          <h2 class="patronage__title">
+            СТАТЬ <span class="text_white">МЕЦЕНАТОМ</span>
+          </h2>
           <div class="patronage__content">
-            <ul class="patronage__info">
-              <li>+7 (812) 123-45-55</li>
-              <li>+7 (812) 123-45-66</li>
-              <li>info@theater.ru</li>
-              <li>г. Санкт-Петербург, невский 140</li>
+            <ul class="patronage__content__info">
+              <li class="patronage__li">+7 (812) 123-45-55</li>
+              <li class="patronage__li">+7 (812) 123-45-66</li>
+              <li class="patronage__li">info@theater.ru</li>
+              <li class="patronage__li">г. Санкт-Петербург, невский 140</li>
             </ul>
-            <div class="user__form">
-              <div class="user__form_inputs">
+            <div class="user-form">
+              <div class="user-form__inputs">
                 <input
                   type="text"
-                  class="user__form__name_input"
+                  class="user-form__input__name"
                   placeholder=" Имя"
                 /><input
                   type="text"
-                  class="user__form__company_input"
+                  class="user-form__input__company"
                   placeholder=" Компания"
                 /><input
                   type="text"
-                  class="user__form__phone_input"
+                  class="user-form__input__phone"
                   placeholder=" Телефон"
                 /><input
                   type="text"
-                  class="user__form__mail_input"
+                  class="user-form__input__mail"
                   placeholder=" E-mail"
                 /><input
                   type="text"
-                  class="user__form__message_input"
+                  class="user-form__input__message"
                   placeholder=" Сообщение"
                 />
               </div>
-              <div class="user__form_submit">
-                <span class="user__form_submit_text">
+              <div class="user-form_bottom">
+                <span class="user-form__text__text_bottom">
                   * Ваши данные не будут переданы третьим лицам, 100%
                   вероятность. Конфиденциальность мы гарантируем, и защищаем
                   персональные данные согласно законку ФЗ-52.
                 </span>
-                <div class="button text_white"><button>Отправить</button></div>
+                <div class="button user-form__button text_white">
+                  <button>Отправить</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <footer class="footer">
+      <footer>
         <div class="content-container">
-          <div class="footer_line"></div>
-          <div class="footer_text">
-            <span>(с) Все права защищены. Большой театр. 2020</span>
-            <span>Разработано d-e-n.ru</span>
+          <div class="footer__line"></div>
+          <div class="footer__text">
+            <span class="footer__text__item"
+              >(с) Все права защищены. Большой театр. 2020</span
+            >
+            <span class="footer__text__item">Разработано d-e-n.ru</span>
           </div>
         </div>
       </footer>
     </div>
   </body>
-</html> 
+</html>

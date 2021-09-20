@@ -2,12 +2,12 @@
   body {
     max-width: 100%;
   }
-  .header__phone {
+  .phone-text {
     position: absolute;
     top: 16%;
     left: 44%;
   }
-  .poster_right {
+  .poster-right {
     display: none;
   }
   .posters {
@@ -15,14 +15,14 @@
     max-width: 100%;
     margin-top: 38%;
   }
-  .poster__left {
+  .poster-left {
     max-width: 90%;
   }
   .content-container {
     max-width: 100%;
     margin: 0 9% 0 17%;
   }
-  .about_img {
+  .about__img {
     display: none;
   }
   .about__description {
@@ -31,10 +31,10 @@
   aside {
     max-width: 14.5%;
   }
-  .main__production {
+  .production {
     margin: 0px 9% 0 17%;
   }
-  .main__review {
+  .review {
     width: 992px;
   }
   .review__content_text {
@@ -48,15 +48,15 @@
   .patronage__content {
     flex-direction: column-reverse;
   }
-  .user__form {
+  .user-form {
     width: 100%;
   }
-  .patronage__info {
+  .patronage__content__info {
     column-count: 2;
     margin-top: 80px;
   }
-  .patronage__info li:nth-child(3),
-  .patronage__info li:nth-child(4) {
+  .patronage__content__info li:nth-child(3),
+  .patronage__content__info li:nth-child(4) {
     text-align: end;
   }
 }
