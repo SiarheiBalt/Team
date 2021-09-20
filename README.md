@@ -1,3 +1,3 @@
 # Team
 
-### [Loyout](https://siarheibalt.github.io/Team/Task1)
+### [Layout](https://siarheibalt.github.io/Team/Task1)
