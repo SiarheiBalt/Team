@@ -21,4 +21,21 @@
   .partners_items {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .production {
+    overflow: hidden;
+    margin-left: 0;
+  }
+  .prodiction__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    height: auto;
+  }
+  .production__item_background1,
+  .production__item_background2,
+  .production__item_background3,
+  .production__item_background4 {
+    margin: 10px;
+  }
 }

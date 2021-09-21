@@ -57,7 +57,7 @@
   .review__content_text {
     font-size: 25px;
     line-height: 37.5px;
-    max-width: 330px;
+    max-width: 250px;
   }
   .review__years {
     margin-left: 4%;
@@ -103,5 +103,12 @@
   }
   .partners_items {
   column-gap: 0;
+  }
+  .production__item_background1,
+  .production__item_background2,
+  .production__item_background3,
+  .production__item_background4 {
+    width: 400px;
+    height: 500px;
   }
 }
