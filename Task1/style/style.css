@@ -412,9 +412,12 @@ aside {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 80px;
   width: 100%;
-  column-gap: 100px;
+  column-gap: 35px;
   overflow: hidden;
   margin-top: 9%;
+}
+.partners_item {
+  margin: auto;
 }
 .patronage {
   height: 435px;

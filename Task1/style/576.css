@@ -101,4 +101,7 @@
   .patronage__content__info {
     margin-top: 50px;
   }
+  .partners_items {
+  column-gap: 0;
+  }
 }

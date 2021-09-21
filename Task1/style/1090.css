@@ -59,4 +59,7 @@
   .patronage__content__info li:nth-child(4) {
     text-align: end;
   }
+  .partners_items {
+    grid-template-columns: 1fr 1fr;
+  }
 }
