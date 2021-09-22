@@ -12,3 +12,4 @@
 "test".padEnd(5); // 'test '
 "test".padEnd(8); // 'test    '
 "test".padEnd(8, "abcd"); // 'testabcd'
+"test".padEnd(10, "*"); //'test******'
