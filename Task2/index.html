@@ -5,8 +5,234 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/style.css">
+
 </head>
 <body>
-    <script src='./ES9/asyncIteration.js'></script>
+<header>
+    <div class="container-content">
+        <h2 class="header__title">
+            JS начиная от ECMAScript 6
+        </h2>   
+    </div>
+</header>
+<main>
+    <div class="container-content">
+        <div class="content">
+            <div class="content__info">
+                <div class="content__block">
+                    <h3 class="content__block__title">Стрелочные функции</h3>
+                    <span class="content__block__text">Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика this.</span>
+                    <img class="content__block__img"  src="./src/pictures/arrowFunction/img1.PNG" alt="picture">
+                    <span class="content__block__text">У стрелочных функций нет this. Если происходит обращение к this, его значение берётся снаружи.
+                    Если бы мы использовали обычную функцию, была бы ошибка.</span>
+                    <img class="content__block__img"  src="./src/pictures/arrowFunction/img2.PNG" alt="picture">
+                </div>                
+                <div class="content__block">
+                    <h3 class="content__block__title">Классы</h3>
+                    <span class="content__block__text">Добавлен более удобный синтаксис, удобное наследование. Доступен функционал геттеров и сеттеров</span>
+                    <img class="content__block__img"  src="./src/pictures/classes/img1.PNG" alt="picture">
+                    <span class="content__block__text">За счет того что метод который определен как статический можно к нему обращаться на прямую.</span>
+                    <img class="content__block__img"  src="./src/pictures/classes/img2.PNG" alt="picture">
+                </div>                
+                <div class="content__block">
+                    <h3 class="content__block__title">Параметры по умолчанию</h3>
+                    <span class="content__block__text">Параметры по умолчанию позволяют задавать формальным параметрам функции значения по умолчанию в случае, если функция
+                    вызвана без аргументов, или если параметру явным образом передано значение undefined.</span>
+                    <img class="content__block__img"  src="./src/pictures/defaultParams.PNG" alt="picture">
+                </div>         
+                <div class="content__block">
+                    <h3 class="content__block__title">Деструктуризация</h3>
+                    <span class="content__block__text">Деструктуризация (destructuring assignment) – это особый синтаксис присваивания, при котором можно присвоить массив
+                    или объект сразу нескольким переменным, разбив его на части.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/destructuring/img1.PNG" alt="picture">
+                    <span class="content__block__text">Деструктуризацию можно использовать и с объектами. Деструктуризацию можно использовать и с объектами.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/destructuring/img2.PNG" alt="picture">
+                </div>         
+                <div class="content__block">
+                    <h3 class="content__block__title">for...of</h3>
+                    <span class="content__block__text">Оператор for...of выполняет цикл обхода итерируемых объектов (включая Array, Map, Set, объект аргументов и подобных),
+                    вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта. Емеет возможность break разрыва
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/destructuring/img1.PNG" alt="picture">
+                </div>         
+                <div class="content__block">
+                    <h3 class="content__block__title">Генераторы</h3>
+                    <span class="content__block__text">Генератор - некоторая ф-я которая может последовательно выдавать результат своей работы. Они отличаются от обычных тем,
+                    что могут приостанавливать своё выполнение, возвращать промежуточный результат и далее возобновлять его позже, в
+                    произвольный момент времени.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/generators.PNG" alt="picture">
+                </div>         
+                <div class="content__block">
+                    <h3 class="content__block__title">Объекты</h3>
+                    <span class="content__block__text">Нововведения:</span>
+                    <ul class="list">
+                        <li class="list__element">можно создавать динамические ключи</li>
+                        <li class="list__element">сокращенная запись если ключ и имя переменной совпадают</li>
+                    </ul>
+                    <img class="content__block__img"  src="./src/pictures/object/img1.PNG" alt="picture">
+                    <span class="content__block__text">Методы</span>
+                    <ul>
+                        <li>Object.is() - определяет, являются ли два значения одинаковыми значениями.</li>
+                        <li>Метод Object.assign() - используется для копирования значений всех собственных перечисляемых свойств из одного или более исходных объектов в
+                            целевой объект. После копирования возвращает целевой объект.</li>
+                            <li>Object.entries() - возвращает массив собственных перечисляемых свойств указанного объекта в формате [key, value].</li>
+                            <li>Object.values() - возвращает массив значений.</li>
+                            <li>Object.getOwnPropertyDescriptor - возвращает все собственные дескрипторы свойств данного объекта. Дескриптор - это набор атрибутов свойства.</li>
+                            <li>Object.fromEntries() - преобразует список пар ключ-значение в объект.</li>
+                        </ul>
+                        <img class="content__block__img" src="./src/pictures/object/img2.PNG" alt="picture">
+                    </div> 
+                    
+                </div>
+                <div class="content__block">
+                    <h3 class="content__block__title">Promise</h3>
+                    <span class="content__block__text">Promise – предоставляют удобный способ организации асинхронного кода.
+                    Он позволяет обрабатывать результаты асинхронных операций так, как если бы они были синхронными: вместо конечного
+                    результата асинхронного метода возвращается своего рода обещание получить результат в некоторый момент в будущем. 
+                    Появился метод finnaly.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/promise/img1.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Promise all</h3>
+                    <span class="content__block__text"> Пример ниже. Имеется 3 промиса, в каждом из которых расположена функция setTimeout со случайной задержкой от 1 до 5 секунд.
+                    Каждый промис своим результатом возвращает эту задержку.
+                    С помощью Promise.all получили массив результатов, нашли его сумму, вывели на экран.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/promise/img1.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Proxy</h3>
+                    <span class="content__block__text"> Объект Proxy «оборачивается» вокруг другого объекта и может перехватывать (и, при желании, самостоятельно обрабатывать)
+                    разные действия с ним, например чтение/запись свойств и другие.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/proxy.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Reflect</h3>
+                    <span class="content__block__text"> 
+                        встроенный объект, который предоставляет методы для перехватывания JavaScript операций. Эти методы аналогичны методам
+                        proxy handler`ов. Reflect - это не функциональный, а простой объект, он не является сконструированным.
+                        В отличие от большинства глобальных объектов, Reflect - это не конструктор. Вы не можете использовать его с оператором
+                        new или вызывать Reflect, как функцию. Все свойства и методы объекта Reflect являются статическими.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/reflect.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Map</h3>
+                    <span class="content__block__text">MAP - это коллекция ключ/значение, как и Object. Но основное отличие в том, что
+                        Map позволяет использовать ключи любого типа.
+                        Имеет методы и свойства.
+                    </span>
+                    <img class="content__block__img" src="./src/pictures/map.PNG" alt="picture">
+                </div>
+                <div class="content__block">
+                    <h3 class="content__block__title">Set</h3>
+                    <span class="content__block__text">Объект Set – это особый вид коллекции: «множество» значений (без ключей), где каждое значение может появляться только
+                    один раз (уникальная коллекция). Имеет методы. Основная «изюминка» – это то, что при повторных вызовах set.add() с одним и тем же значением ничего не происходит, за
+                    счёт этого как раз и получается, что каждое значение появляется один раз. Например, мы ожидаем посетителей, и нам необходимо составить их список. Но повторные визиты не должны приводить к
+                    дубликатам. Каждый посетитель должен появиться в списке только один раз.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/set.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Rest, Spred</h3>
+                    <span class="content__block__text">Остаточные параметры и оператор расширения.
+                        Остаточные параметры используются, чтобы создавать новые функции с неопределённым числом аргументов.
+                        С помощью оператора расширения можно вставить массив в функцию, которая по умолчанию работает с обычным списком
+                        аргументов. Вместе эти конструкции помогают легко преобразовывать наборы значений в массивы и обратно.
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/rest.PNG" alt="picture">
+                    <span>SPREAD оператор расширения. Он похож на остаточные параметры – тоже использует ..., но делает совершенно
+                        противоположное. Он «расширяет» перебираемый объект в список аргументов..
+                    </span>
+                    <img class="content__block__img"  src="./src/pictures/spread.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">String methods</h3>
+                    <ul>
+                        <li>str.repeat() - повторяет строки указанное количество раз.</li>
+                        <li>str.codePointAt() возвращает не отрицательное целое число, которое является закодированным в UTF-16 значением кодовой точки.</li>
+                        <li>str.padStart(), str.padEnd() - целью заполнения строки является добавление символов в строку, чтобы она достигла определенной длины</li>
+                        <li>str.trimStart(), str.trimEnd() - могут быть использованы для обрезки пробелов в начале или в конце строки.</li>
+                        <li>String.prototype.replaceAll() - возвращает новую строку со всеми совпадениями pattern , который меняется на replacement. pattern может быть строкой или
+                        регулярным выражением, и replacement может быть строкой или функция возвращающая каждое совпадение.</li>
+                    </ul>
+                    <img class="content__block__img"  src="./src/pictures/stringMethods.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Шаблонные литералы</h3>
+                    <span class="content__block__text">Шаблонными литералами называются строковые литералы, допускающие использование выражений внутри. С ними вы можете
+                    использовать многострочные литералы и строковую интерполяцию.</span>
+                    <img class="content__block__img"  src="./src/pictures/stringTemplate.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Let, const, var</h3>
+                    <span class="content__block__text">Директива let позволяет объявить локальную переменную с областью видимости, ограниченной текущим блоком кода . В отличие
+                    от ключевого слова var, которое объявляет переменную глобально или локально во всей функции, независимо от области
+                    блока. Значение констант не может быть изменено новым присваиванием, а также не может быть переопределено. Константы (const)
+                    подчиняются области видимости уровня блока так же, как переменные, объявленные с использованием ключевого слова let.</span>
+                    <img class="content__block__img"  src="./src/pictures/variable.PNG" alt="picture">
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Методы массивов</h3>
+                    <ul>
+                        <li>array.includes() - вводит более читаемый синтаксис для проверки, содержит ли массив элемент, возвращая в зависимости от этого true или
+                            false</li>
+                            <li>Array.flat() - возвращает новый массив, в котором все подмассивы были рекурсивно “подняты” на указанный уровень глубины. Вызов
+                            Array.flat() без каких-либо аргументов сглаживает только первый уровень глубины. Можно указать необязательный аргумент
+                            глубины или вызвать функцию последовательно.</li>
+                            <li>Array.flatMap() - идентичен методу map ES6, но в то же время сглаживает первый уровень глубины массива. Метод flatMap() сначала перебирает
+                            каждый элемент с помощью функции map(), а затем выравнивает результат через flat() в новый массив.</li>
+                        </ul>
+                        <img class="content__block__img"  src="./src/pictures/arrayMethods/arrayMethods.PNG" alt="picture">
+                    </div> 
+                </div> 
+                <div class="content__block">
+                    <h3 class="content__block__title">Async await</h3>
+                    <span class="content__block__text">Существует специальный синтаксис для работы с промисами, который называется «async/await». Он удивительно прост для
+                    понимания и использования.</span>
+                    <img class="content__block__img"  src="./src/pictures/asyncAwait.PNG" alt="picture">
+                </div>
+                <div class="content__block">
+                    <h3 class="content__block__title">For-await-of</h3>
+                    <span class="content__block__text">Позволяет нам вызывать асинхронные функции, которые возвращают промис в цикле.</span>
+                    <img class="content__block__img"  src="./src/pictures/for-await-of.PNG" alt="picture">
+                </div>
+                <div class="content__block">
+                    <h3 class="content__block__title">Try...catch</h3>
+                    <span class="content__block__text">Конструкция try...catch пытается выполнить инструкции в блоке try, и, в случае ошибки, выполняет блок catch. C ES2019, необязательная привязка catch позволяет разработчикам использовать try/catch без параметра error внутри блока catch</span>
+                    <img class="content__block__img"  src="./src/pictures/tryCatch.PNG" alt="picture">
+                </div>
+                <div class="content__block">
+                    <h3 class="content__block__title">Экспорт и импорт</h3>
+                    <span class="content__block__text">Директивы экспорт и импорт имеют несколько вариантов вызова.</span>
+                    <img class="content__block__img"  src="./src/pictures/export.PNG" alt="picture">
+                    <span class="content__block__text">фигурные скобки необходимы в случае именованных экспортов, для export default они не нужны.</span>
+                    <img class="content__block__img"  src="./src/pictures/import.PNG" alt="picture">
+                </div>
+                <div class="content__block">
+                    <h3 class="content__block__title">Висящие запятые</h3>
+                    <span class="content__block__text">Висящие запятые (Trailing commas) — могут быть полезны при добавлении новых элементов, параметров или свойств в код
+                    JavaScript. Если вы хотите добавить новое свойство, вы просто добавляете новую строчку без изменения предыдущей, если в
+                    ней уже использована висящая запятая. Это делает различия в контроле версий чище и изменение кода может быть менее
+                    хлопотным.</span>
+                    <img class="content__block__img"  src="./src/pictures/trailingCommas.PNG" alt="picture">
+                </div>
+                <div class="content__block">
+                    <h3 class="content__block__title">BigInt</h3>
+                    <span class="content__block__text">BigInt это встроенный объект, который предоставляет способ представлять целые числа больше 2 <sup>53</sup> - 1, наибольшего числа,
+                    которое JavaScript может надёжно представить с Number примитивом. Это максимальное значение можно получить, обратившись
+                    к Number.MAX_SAFE_INTEGER.</span>
+                    <img class="content__block__img"  src="./src/pictures/bigInt.PNG" alt="picture">
+                </div>  
+        </div>
+    </div>
+</main>
+    <script src='./files/ES2019/objectMethods.js'></script>
 </body>
 </html>

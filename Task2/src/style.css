@@ -1,0 +1,20 @@
+.container-content {
+  width: 1200px;
+  margin: auto;
+  background-color: whitesmoke;
+}
+.header__title {
+  color: rgb(48, 48, 48);
+  text-align: center;
+}
+.content__block {
+  display: flex;
+  flex-direction: column;
+}
+.content__block__img {
+  width: fit-content;
+  margin: 5px 0;
+}
+.content__block__title {
+  text-align: center;
+}
