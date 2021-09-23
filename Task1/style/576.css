@@ -77,13 +77,13 @@
       "d f "
       "c c";
   }
-  .user-form__input__message {
+  .user-form__input_message {
     width: 99%;
   }
-  .user-form__input__name,
-  .user-form__input__company,
-  .user-form__input__phone,
-  .user-form__input__mail {
+  .user-form__input_name,
+  .user-form__input_company,
+  .user-form__input_phone,
+  .user-form__input_mail {
     width: 98%;
   }
   .user-form__inputs {
@@ -102,7 +102,7 @@
     margin-top: 50px;
   }
   .partners_items {
-  column-gap: 0;
+    column-gap: 0;
   }
   .production__item_background1,
   .production__item_background2,

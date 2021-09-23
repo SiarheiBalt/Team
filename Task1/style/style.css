@@ -452,16 +452,16 @@ aside {
   display: flex;
   justify-content: space-between;
 }
-.user-form__input__name,
-.user-form__input__company,
-.user-form__input__phone,
-.user-form__input__mail {
+.user-form__input_name,
+.user-form__input_company,
+.user-form__input_phone,
+.user-form__input_mail {
   border: 1px solid #616161;
   background-color: #444444;
   width: 95%;
   height: 35px;
 }
-.user-form__input__message {
+.user-form__input_message {
   border: 1px solid #616161;
   background-color: #444444;
   width: 310px;
@@ -485,19 +485,19 @@ aside {
   text-align: left;
   color: #989898;
 }
-.user-form__input__name {
+.user-form__input_name {
   grid-area: a;
 }
-.user-form__input__company {
+.user-form__input_company {
   grid-area: b;
 }
-.user-form__input__phone {
+.user-form__input_phone {
   grid-area: d;
 }
-.user-form__input__mail {
+.user-form__input_mail {
   grid-area: f;
 }
-.user-form__input__message {
+.user-form__input_message {
   grid-area: c;
 }
 .user__form_submit button {
