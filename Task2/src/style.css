@@ -1,7 +1,12 @@
+body {
+  background-color: whitesmoke;
+}
 .container-content {
   width: 1200px;
   margin: auto;
-  background-color: whitesmoke;
+  font-family: sans-serif;
+}
+.wrapper {
 }
 .header__title {
   color: rgb(48, 48, 48);
@@ -10,11 +15,49 @@
 .content__block {
   display: flex;
   flex-direction: column;
+  margin: 15px;
 }
 .content__block__img {
   width: fit-content;
-  margin: 5px 0;
+  margin: 10px 0px 15px;
 }
 .content__block__title {
   text-align: center;
+}
+.header-menu__link {
+  background-color: khaki;
+  border: solid 1px white;
+  border-radius: 50px;
+  padding: 6px;
+  margin: 3px;
+}
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.link_top {
+  text-decoration: none;
+}
+
+.link_top:link {
+  color: black;
+}
+.link_top:hover {
+  color: gray;
+}
+.link_up {
+  width: 40px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 25px;
+  position: fixed;
+  right: 18%;
+  bottom: 40px;
+  cursor: pointer;
+  border: none;
+  color: black;
+}
+.fas {
+  margin: 12px;
 }

@@ -1,26 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/style.css">
-
+    
 </head>
 <body>
-<header>
-    <div class="container-content">
+    
+    <header id="top">
+        <div class="container-content">
+            <a href="#top" hidden class="link_up">
+                <i id="" class="fas fa-arrow-circle-up"></i>
+            </a>
         <h2 class="header__title">
             JS начиная от ECMAScript 6
         </h2>   
+        <div class="header-menu">
+            <div class="header-menu__link">
+                <a class="link_top" href="#arrows">Стрелочные функции</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#classes">Классы</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#defaultParam">Параметры по умалчиванию</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#destruction">Деструктуризация</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#forOf">for...of</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#forOf">for...of</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#generators">Генераторы</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#object">Объекты</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#promise">Промисы</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#promiseAll">Promise all</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#proxy">Proxy</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#reflect">Reflect</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#map">Map</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#set">Set</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#spread">Spread, Rest</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#strMethods">String methods</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#literals">Шаблонные литералы</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#variables">Variables</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#arrMethods">Методы массивов</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#asyncAwait">Async await</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#forAwaitOf">for-await-of</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#tryCatch">try...catch</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#expImp">Експорт, Импорт</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#comma">Висящие запятые</a>
+            </div>
+            <div class="header-menu__link">
+                <a class="link_top"  href="#bigInt">BigInt</a>
+            </div>
+        </div>
     </div>
 </header>
 <main>
     <div class="container-content">
         <div class="content">
             <div class="content__info">
-                <div class="content__block">
+                <div id="arrows" class="content__block">
                     <h3 class="content__block__title">Стрелочные функции</h3>
                     <span class="content__block__text">Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика this.</span>
                     <img class="content__block__img"  src="./src/pictures/arrowFunction/img1.PNG" alt="picture">
@@ -28,20 +109,20 @@
                     Если бы мы использовали обычную функцию, была бы ошибка.</span>
                     <img class="content__block__img"  src="./src/pictures/arrowFunction/img2.PNG" alt="picture">
                 </div>                
-                <div class="content__block">
+                <div id="#classes" class="content__block">
                     <h3 class="content__block__title">Классы</h3>
                     <span class="content__block__text">Добавлен более удобный синтаксис, удобное наследование. Доступен функционал геттеров и сеттеров</span>
                     <img class="content__block__img"  src="./src/pictures/classes/img1.PNG" alt="picture">
                     <span class="content__block__text">За счет того что метод который определен как статический можно к нему обращаться на прямую.</span>
                     <img class="content__block__img"  src="./src/pictures/classes/img2.PNG" alt="picture">
                 </div>                
-                <div class="content__block">
+                <div id="defaultParam" class="content__block">
                     <h3 class="content__block__title">Параметры по умолчанию</h3>
                     <span class="content__block__text">Параметры по умолчанию позволяют задавать формальным параметрам функции значения по умолчанию в случае, если функция
                     вызвана без аргументов, или если параметру явным образом передано значение undefined.</span>
                     <img class="content__block__img"  src="./src/pictures/defaultParams.PNG" alt="picture">
                 </div>         
-                <div class="content__block">
+                <div id="destruction" class="content__block">
                     <h3 class="content__block__title">Деструктуризация</h3>
                     <span class="content__block__text">Деструктуризация (destructuring assignment) – это особый синтаксис присваивания, при котором можно присвоить массив
                     или объект сразу нескольким переменным, разбив его на части.
@@ -51,14 +132,14 @@
                     </span>
                     <img class="content__block__img"  src="./src/pictures/destructuring/img2.PNG" alt="picture">
                 </div>         
-                <div class="content__block">
+                <div id="forOf" class="content__block">
                     <h3 class="content__block__title">for...of</h3>
                     <span class="content__block__text">Оператор for...of выполняет цикл обхода итерируемых объектов (включая Array, Map, Set, объект аргументов и подобных),
                     вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта. Емеет возможность break разрыва
                     </span>
                     <img class="content__block__img"  src="./src/pictures/destructuring/img1.PNG" alt="picture">
                 </div>         
-                <div class="content__block">
+                <div id="generators" class="content__block">
                     <h3 class="content__block__title">Генераторы</h3>
                     <span class="content__block__text">Генератор - некоторая ф-я которая может последовательно выдавать результат своей работы. Они отличаются от обычных тем,
                     что могут приостанавливать своё выполнение, возвращать промежуточный результат и далее возобновлять его позже, в
@@ -66,7 +147,7 @@
                     </span>
                     <img class="content__block__img"  src="./src/pictures/generators.PNG" alt="picture">
                 </div>         
-                <div class="content__block">
+                <div id="object" class="content__block">
                     <h3 class="content__block__title">Объекты</h3>
                     <span class="content__block__text">Нововведения:</span>
                     <ul class="list">
@@ -88,7 +169,7 @@
                     </div> 
                     
                 </div>
-                <div class="content__block">
+                <div id='promise' class="content__block">
                     <h3 class="content__block__title">Promise</h3>
                     <span class="content__block__text">Promise – предоставляют удобный способ организации асинхронного кода.
                     Он позволяет обрабатывать результаты асинхронных операций так, как если бы они были синхронными: вместо конечного
@@ -97,7 +178,7 @@
                     </span>
                     <img class="content__block__img"  src="./src/pictures/promise/img1.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="promiseAll" class="content__block">
                     <h3 class="content__block__title">Promise all</h3>
                     <span class="content__block__text"> Пример ниже. Имеется 3 промиса, в каждом из которых расположена функция setTimeout со случайной задержкой от 1 до 5 секунд.
                     Каждый промис своим результатом возвращает эту задержку.
@@ -105,14 +186,14 @@
                     </span>
                     <img class="content__block__img"  src="./src/pictures/promise/img1.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="proxy" class="content__block">
                     <h3 class="content__block__title">Proxy</h3>
                     <span class="content__block__text"> Объект Proxy «оборачивается» вокруг другого объекта и может перехватывать (и, при желании, самостоятельно обрабатывать)
                     разные действия с ним, например чтение/запись свойств и другие.
                     </span>
                     <img class="content__block__img"  src="./src/pictures/proxy.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="reflect" class="content__block">
                     <h3 class="content__block__title">Reflect</h3>
                     <span class="content__block__text"> 
                         встроенный объект, который предоставляет методы для перехватывания JavaScript операций. Эти методы аналогичны методам
@@ -122,7 +203,7 @@
                     </span>
                     <img class="content__block__img"  src="./src/pictures/reflect.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="map" class="content__block">
                     <h3 class="content__block__title">Map</h3>
                     <span class="content__block__text">MAP - это коллекция ключ/значение, как и Object. Но основное отличие в том, что
                         Map позволяет использовать ключи любого типа.
@@ -130,7 +211,7 @@
                     </span>
                     <img class="content__block__img" src="./src/pictures/map.PNG" alt="picture">
                 </div>
-                <div class="content__block">
+                <div id="set" class="content__block">
                     <h3 class="content__block__title">Set</h3>
                     <span class="content__block__text">Объект Set – это особый вид коллекции: «множество» значений (без ключей), где каждое значение может появляться только
                     один раз (уникальная коллекция). Имеет методы. Основная «изюминка» – это то, что при повторных вызовах set.add() с одним и тем же значением ничего не происходит, за
@@ -139,7 +220,7 @@
                     </span>
                     <img class="content__block__img"  src="./src/pictures/set.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="spread" class="content__block">
                     <h3 class="content__block__title">Rest, Spred</h3>
                     <span class="content__block__text">Остаточные параметры и оператор расширения.
                         Остаточные параметры используются, чтобы создавать новые функции с неопределённым числом аргументов.
@@ -152,7 +233,7 @@
                     </span>
                     <img class="content__block__img"  src="./src/pictures/spread.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="strMethods" class="content__block">
                     <h3 class="content__block__title">String methods</h3>
                     <ul>
                         <li>str.repeat() - повторяет строки указанное количество раз.</li>
@@ -164,13 +245,13 @@
                     </ul>
                     <img class="content__block__img"  src="./src/pictures/stringMethods.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="literals" class="content__block">
                     <h3 class="content__block__title">Шаблонные литералы</h3>
                     <span class="content__block__text">Шаблонными литералами называются строковые литералы, допускающие использование выражений внутри. С ними вы можете
                     использовать многострочные литералы и строковую интерполяцию.</span>
                     <img class="content__block__img"  src="./src/pictures/stringTemplate.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="variables" class="content__block">
                     <h3 class="content__block__title">Let, const, var</h3>
                     <span class="content__block__text">Директива let позволяет объявить локальную переменную с областью видимости, ограниченной текущим блоком кода . В отличие
                     от ключевого слова var, которое объявляет переменную глобально или локально во всей функции, независимо от области
@@ -178,7 +259,7 @@
                     подчиняются области видимости уровня блока так же, как переменные, объявленные с использованием ключевого слова let.</span>
                     <img class="content__block__img"  src="./src/pictures/variable.PNG" alt="picture">
                 </div> 
-                <div class="content__block">
+                <div id="arrMethods" class="content__block">
                     <h3 class="content__block__title">Методы массивов</h3>
                     <ul>
                         <li>array.includes() - вводит более читаемый синтаксис для проверки, содержит ли массив элемент, возвращая в зависимости от этого true или
@@ -192,30 +273,30 @@
                         <img class="content__block__img"  src="./src/pictures/arrayMethods/arrayMethods.PNG" alt="picture">
                     </div> 
                 </div> 
-                <div class="content__block">
+                <div id="asyncAwait" class="content__block">
                     <h3 class="content__block__title">Async await</h3>
                     <span class="content__block__text">Существует специальный синтаксис для работы с промисами, который называется «async/await». Он удивительно прост для
                     понимания и использования.</span>
                     <img class="content__block__img"  src="./src/pictures/asyncAwait.PNG" alt="picture">
                 </div>
-                <div class="content__block">
+                <div id="forAwaitOf" class="content__block">
                     <h3 class="content__block__title">For-await-of</h3>
                     <span class="content__block__text">Позволяет нам вызывать асинхронные функции, которые возвращают промис в цикле.</span>
                     <img class="content__block__img"  src="./src/pictures/for-await-of.PNG" alt="picture">
                 </div>
-                <div class="content__block">
+                <div id="tryCatch" class="content__block">
                     <h3 class="content__block__title">Try...catch</h3>
                     <span class="content__block__text">Конструкция try...catch пытается выполнить инструкции в блоке try, и, в случае ошибки, выполняет блок catch. C ES2019, необязательная привязка catch позволяет разработчикам использовать try/catch без параметра error внутри блока catch</span>
                     <img class="content__block__img"  src="./src/pictures/tryCatch.PNG" alt="picture">
                 </div>
-                <div class="content__block">
+                <div id="expImp" class="content__block">
                     <h3 class="content__block__title">Экспорт и импорт</h3>
                     <span class="content__block__text">Директивы экспорт и импорт имеют несколько вариантов вызова.</span>
                     <img class="content__block__img"  src="./src/pictures/export.PNG" alt="picture">
                     <span class="content__block__text">фигурные скобки необходимы в случае именованных экспортов, для export default они не нужны.</span>
                     <img class="content__block__img"  src="./src/pictures/import.PNG" alt="picture">
                 </div>
-                <div class="content__block">
+                <div id="comma" class="content__block">
                     <h3 class="content__block__title">Висящие запятые</h3>
                     <span class="content__block__text">Висящие запятые (Trailing commas) — могут быть полезны при добавлении новых элементов, параметров или свойств в код
                     JavaScript. Если вы хотите добавить новое свойство, вы просто добавляете новую строчку без изменения предыдущей, если в
@@ -223,7 +304,7 @@
                     хлопотным.</span>
                     <img class="content__block__img"  src="./src/pictures/trailingCommas.PNG" alt="picture">
                 </div>
-                <div class="content__block">
+                <div id="bigInt" class="content__block">
                     <h3 class="content__block__title">BigInt</h3>
                     <span class="content__block__text">BigInt это встроенный объект, который предоставляет способ представлять целые числа больше 2 <sup>53</sup> - 1, наибольшего числа,
                     которое JavaScript может надёжно представить с Number примитивом. Это максимальное значение можно получить, обратившись
@@ -233,6 +314,7 @@
         </div>
     </div>
 </main>
-    <script src='./files/ES2019/objectMethods.js'></script>
+    <script src='./src/app.js'></script>
+    <script src="https://kit.fontawesome.com/808597c4dd.js" crossorigin="anonymous"></script>
 </body>
 </html>

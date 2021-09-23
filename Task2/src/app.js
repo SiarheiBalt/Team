@@ -1,29 +1,22 @@
-const data = [
-  {
-    title: "Стрелочные функции",
-    date: [
-      {
-        text: "Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика this",
-        img: "/Task2/src/pictures/arrowFunction/img1.PNG",
-      },
-      {
-        text: `У стрелочных функций нет this. Если происходит обращение к this, его значение берётся снаружи.
-Если бы мы использовали обычную функцию, была бы ошибка.`,
-        img: "/Task2/src/pictures/arrowFunction/img2.PNG",
-      },
-    ],
-  },
-  {
-    title: "Классы",
-    date: [
-      {
-        text: "Добавлен более удобный синтаксис, удобное наследование. Доступен функционал геттеров и сеттеров",
-        img: "/Task2/src/pictures/arrowFunction/img1.PNG",
-      },
-      {
-        text: ` За счет того что метод который определен как статический можно к нему обращаться на прямую.`,
-        img: "/Task2/src/pictures/arrowFunction/img2.PNG",
-      },
-    ],
-  },
-];
+const button = document.querySelector(".link_up");
+
+window.addEventListener("scroll", function () {
+  button.hidden = scrollY < document.documentElement.clientHeight;
+});
+
+const anchors = document.querySelectorAll('a[href^="#"]');
+// Цикл по всем ссылкам
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault(); // Предотвратить стандартное поведение ссылок
+    // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
+    const goto = anchor.hasAttribute("href")
+      ? anchor.getAttribute("href")
+      : "body";
+    // Плавная прокрутка до элемента с id = href у ссылки
+    document.querySelector(goto).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}
