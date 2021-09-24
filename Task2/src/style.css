@@ -6,8 +6,6 @@ body {
   margin: auto;
   font-family: sans-serif;
 }
-.wrapper {
-}
 .header__title {
   color: rgb(48, 48, 48);
   text-align: center;
@@ -53,7 +51,7 @@ body {
   background-color: lightgray;
   border-radius: 25px;
   position: fixed;
-  right: 18%;
+  right: 10%;
   bottom: 40px;
   cursor: pointer;
   border: none;

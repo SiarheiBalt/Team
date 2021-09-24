@@ -9,8 +9,7 @@
     
 </head>
 <body>
-    
-    <header id="top">
+    <header class="header" id="top">
         <div class="container-content">
             <a href="#top" hidden class="link_up">
                 <i id="" class="fas fa-arrow-circle-up"></i>
@@ -98,16 +97,10 @@
                 <a class="link_top"  href="#regExp">Регулярные выражения</a>
             </div>
             <div class="header-menu__link">
-                <a class="link_top"  href="#condOperator">Условный оператор</a>
-            </div>
-            <div class="header-menu__link">
                 <a class="link_top"  href="#optChain">Опциональная цепочка</a>
             </div>
             <div class="header-menu__link">
                 <a class="link_top"  href="#symbol">Symbol</a>
-            </div>
-            <div class="header-menu__link">
-                <a class="link_top"  href="#logicalOperation">Логические операторы</a>
             </div>
         </div>
     </div>
@@ -116,7 +109,7 @@
     <div class="container-content">
         <div class="content">
             <div class="content__info">
-                <div id="arrows" class="content__block">
+                <div class="content__block" id="arrows" >
                     <h3 class="content__block__title">Стрелочные функции</h3>
                     <span class="content__block__text">Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика this.</span>
                     <img class="content__block__img"  src="./pictures/arrowFunction/img1.PNG" alt="picture">
@@ -124,20 +117,20 @@
                     Если бы мы использовали обычную функцию, была бы ошибка.</span>
                     <img class="content__block__img"  src="./pictures/arrowFunction/img2.PNG" alt="picture">
                 </div>                
-                <div id="#classes" class="content__block">
+                <div  class="content__block" id="#classes">
                     <h3 class="content__block__title">Классы</h3>
                     <span class="content__block__text">Добавлен более удобный синтаксис, удобное наследование. Доступен функционал геттеров и сеттеров</span>
                     <img class="content__block__img"  src="./pictures/classes/img1.PNG" alt="picture">
                     <span class="content__block__text">За счет того что метод который определен как статический можно к нему обращаться на прямую.</span>
                     <img class="content__block__img"  src="./pictures/classes/img2.PNG" alt="picture">
                 </div>                
-                <div id="defaultParam" class="content__block">
+                <div class="content__block" id="defaultParam" >
                     <h3 class="content__block__title">Параметры по умолчанию</h3>
                     <span class="content__block__text">Параметры по умолчанию позволяют задавать формальным параметрам функции значения по умолчанию в случае, если функция
                     вызвана без аргументов, или если параметру явным образом передано значение undefined.</span>
                     <img class="content__block__img"  src="./pictures/defaultParams.PNG" alt="picture">
                 </div>         
-                <div id="destruction" class="content__block">
+                <div class="content__block" id="destruction" >
                     <h3 class="content__block__title">Деструктуризация</h3>
                     <span class="content__block__text">Деструктуризация (destructuring assignment) – это особый синтаксис присваивания, при котором можно присвоить массив
                     или объект сразу нескольким переменным, разбив его на части.
@@ -147,14 +140,14 @@
                     </span>
                     <img class="content__block__img"  src="./pictures/destructuring/img2.PNG" alt="picture">
                 </div>         
-                <div id="forOf" class="content__block">
+                <div class="content__block" id="forOf" >
                     <h3 class="content__block__title">for...of</h3>
                     <span class="content__block__text">Оператор for...of выполняет цикл обхода итерируемых объектов (включая Array, Map, Set, объект аргументов и подобных),
                     вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта. Емеет возможность break разрыва
                     </span>
                     <img class="content__block__img"  src="./pictures/destructuring/img1.PNG" alt="picture">
                 </div>         
-                <div id="generators" class="content__block">
+                <div class="content__block" id="generators" >
                     <h3 class="content__block__title">Итераторы, генераторы</h3>
                     <span class="content__block__text"> Объект является итератором, если он умеет обращаться к элементам коллекции по одному за раз, при этом отслеживая своё
                     текущее положение внутри этой последовательности. В JavaScript итератор - это объект, который предоставляет метод
@@ -165,7 +158,7 @@
                     </span>
                     <img class="content__block__img"  src="./pictures/generators.PNG" alt="picture">
                 </div>         
-                <div id="object" class="content__block">
+                <div class="content__block" id="object" >
                     <h3 class="content__block__title">Объекты</h3>
                     <span class="content__block__text">Нововведения:</span>
                     <ul class="list">
@@ -185,7 +178,7 @@
                         </ul>
                         <img class="content__block__img" src="./pictures/object/img2.PNG" alt="picture">                
                 </div>
-                <div id='promise' class="content__block">
+                <div class="content__block" id='promise' >
                     <h3 class="content__block__title">Promise</h3>
                     <span class="content__block__text">Promise – предоставляют удобный способ организации асинхронного кода.
                     Он позволяет обрабатывать результаты асинхронных операций так, как если бы они были синхронными: вместо конечного
@@ -194,7 +187,7 @@
                     </span>
                     <img class="content__block__img"  src="./pictures/promise/img1.PNG" alt="picture">
                 </div> 
-                <div id="promiseAll" class="content__block">
+                <div class="content__block" id="promiseAll" >
                     <h3 class="content__block__title">Promise all</h3>
                     <span class="content__block__text"> Пример ниже. Имеется 3 промиса, в каждом из которых расположена функция setTimeout со случайной задержкой от 1 до 5 секунд.
                     Каждый промис своим результатом возвращает эту задержку.
@@ -202,14 +195,14 @@
                     </span>
                     <img class="content__block__img"  src="./pictures/promise/img1.PNG" alt="picture">
                 </div> 
-                <div id="proxy" class="content__block">
+                <div class="content__block" id="proxy" >
                     <h3 class="content__block__title">Proxy</h3>
                     <span class="content__block__text"> Объект Proxy «оборачивается» вокруг другого объекта и может перехватывать (и, при желании, самостоятельно обрабатывать)
                     разные действия с ним, например чтение/запись свойств и другие.
                     </span>
                     <img class="content__block__img"  src="./pictures/proxy.PNG" alt="picture">
                 </div> 
-                <div id="reflect" class="content__block">
+                <div class="content__block" id="reflect" >
                     <h3 class="content__block__title">Reflect</h3>
                     <span class="content__block__text"> 
                         встроенный объект, который предоставляет методы для перехватывания JavaScript операций. Эти методы аналогичны методам
@@ -219,7 +212,7 @@
                     </span>
                     <img class="content__block__img"  src="./pictures/reflect.PNG" alt="picture">
                 </div> 
-                <div id="map" class="content__block">
+                <div class="content__block" id="map" >
                     <h3 class="content__block__title">Map</h3>
                     <span class="content__block__text">MAP - это коллекция ключ/значение, как и Object. Но основное отличие в том, что
                         Map позволяет использовать ключи любого типа.
@@ -227,7 +220,7 @@
                     </span>
                     <img class="content__block__img" src="./pictures/map.PNG" alt="picture">
                 </div>
-                <div id="set" class="content__block">
+                <div class="content__block" id="set" >
                     <h3 class="content__block__title">Set</h3>
                     <span class="content__block__text">Объект Set – это особый вид коллекции: «множество» значений (без ключей), где каждое значение может появляться только
                     один раз (уникальная коллекция). Имеет методы. Основная «изюминка» – это то, что при повторных вызовах set.add() с одним и тем же значением ничего не происходит, за
@@ -236,7 +229,7 @@
                     </span>
                     <img class="content__block__img"  src="./pictures/set.PNG" alt="picture">
                 </div> 
-                <div id="spread" class="content__block">
+                <div class="content__block" id="spread" >
                     <h3 class="content__block__title">Rest, Spred</h3>
                     <span class="content__block__text">Остаточные параметры и оператор расширения.
                         Остаточные параметры используются, чтобы создавать новые функции с неопределённым числом аргументов.
@@ -249,7 +242,7 @@
                     </span>
                     <img class="content__block__img"  src="./pictures/spread.PNG" alt="picture">
                 </div> 
-                <div id="strMethods" class="content__block">
+                <div class="content__block" id="strMethods" >
                     <h3 class="content__block__title">String methods</h3>
                     <ul>
                         <li>str.repeat() - повторяет строки указанное количество раз.</li>
@@ -261,13 +254,13 @@
                     </ul>
                     <img class="content__block__img"  src="./pictures/stringMethods.PNG" alt="picture">
                 </div> 
-                <div id="literals" class="content__block">
+                <div class="content__block" id="literals" >
                     <h3 class="content__block__title">Шаблонные литералы</h3>
                     <span class="content__block__text">Шаблонными литералами называются строковые литералы, допускающие использование выражений внутри. С ними вы можете
                     использовать многострочные литералы и строковую интерполяцию.</span>
                     <img class="content__block__img"  src="./pictures/stringTemplate.PNG" alt="picture">
                 </div> 
-                <div id="variables" class="content__block">
+                <div class="content__block" id="variables" >
                     <h3 class="content__block__title">Let, const, var</h3>
                     <span class="content__block__text">Директива let позволяет объявить локальную переменную с областью видимости, ограниченной текущим блоком кода . В отличие
                     от ключевого слова var, которое объявляет переменную глобально или локально во всей функции, независимо от области
@@ -275,7 +268,7 @@
                     подчиняются области видимости уровня блока так же, как переменные, объявленные с использованием ключевого слова let.</span>
                     <img class="content__block__img"  src="./pictures/variable.PNG" alt="picture">
                 </div> 
-                <div id="arrMethods" class="content__block">
+                <div class="content__block" id="arrMethods" >
                     <h3 class="content__block__title">Методы массивов</h3>
                     <ul>
                         <li>array.includes() - вводит более читаемый синтаксис для проверки, содержит ли массив элемент, возвращая в зависимости от этого true или
@@ -288,30 +281,30 @@
                         </ul>
                         <img class="content__block__img"  src="./pictures/arrayMethods/arrayMethods.PNG" alt="picture">
                 </div> 
-                <div id="asyncAwait" class="content__block">
+                <div class="content__block" id="asyncAwait" >
                     <h3 class="content__block__title">Async await</h3>
                     <span class="content__block__text">Существует специальный синтаксис для работы с промисами, который называется «async/await». Он удивительно прост для
                     понимания и использования.</span>
                     <img class="content__block__img"  src="./pictures/asyncAwait.PNG" alt="picture">
                 </div>
-                <div id="forAwaitOf" class="content__block">
+                <div class="content__block" id="forAwaitOf" >
                     <h3 class="content__block__title">For-await-of</h3>
                     <span class="content__block__text">Позволяет нам вызывать асинхронные функции, которые возвращают промис в цикле.</span>
                     <img class="content__block__img"  src="./pictures/for-await-of.PNG" alt="picture">
                 </div>
-                <div id="tryCatch" class="content__block">
+                <div class="content__block" id="tryCatch" >
                     <h3 class="content__block__title">Try...catch</h3>
                     <span class="content__block__text">Конструкция try...catch пытается выполнить инструкции в блоке try, и, в случае ошибки, выполняет блок catch. C ES2019, необязательная привязка catch позволяет разработчикам использовать try/catch без параметра error внутри блока catch</span>
                     <img class="content__block__img"  src="./pictures/tryCatch.PNG" alt="picture">
                 </div>
-                <div id="expImp" class="content__block">
+                <div class="content__block" id="expImp" >
                     <h3 class="content__block__title">Экспорт и импорт</h3>
                     <span class="content__block__text">Директивы экспорт и импорт имеют несколько вариантов вызова.</span>
                     <img class="content__block__img"  src="./pictures/export.PNG" alt="picture">
                     <span class="content__block__text">фигурные скобки необходимы в случае именованных экспортов, для export default они не нужны.</span>
                     <img class="content__block__img"  src="./pictures/import.PNG" alt="picture">
                 </div>
-                <div id="comma" class="content__block">
+                <div class="content__block" id="comma" >
                     <h3 class="content__block__title">Висящие запятые</h3>
                     <span class="content__block__text">Висящие запятые (Trailing commas) — могут быть полезны при добавлении новых элементов, параметров или свойств в код
                     JavaScript. Если вы хотите добавить новое свойство, вы просто добавляете новую строчку без изменения предыдущей, если в
@@ -319,14 +312,14 @@
                     хлопотным.</span>
                     <img class="content__block__img"  src="./pictures/trailingCommas.PNG" alt="picture">
                 </div>
-                <div id="bigInt" class="content__block">
+                <div class="content__block" id="bigInt" >
                     <h3 class="content__block__title">BigInt</h3>
                     <span class="content__block__text">BigInt это встроенный объект, который предоставляет способ представлять целые числа больше 2 <sup>53</sup> - 1, наибольшего числа,
                     которое JavaScript может надёжно представить с Number примитивом. Это максимальное значение можно получить, обратившись
                     к Number.MAX_SAFE_INTEGER.</span>
                     <img class="content__block__img"  src="./pictures/bigInt.PNG" alt="picture">
                 </div>  
-                <div id="regExp" class="content__block">
+                <div class="content__block" id="regExp" >
                     <h3 class="content__block__title">Регулярные выражения</h3>
                     <span class="content__block__text">В регулярных выражениях появилась возможность ретроспективной проверки строк (?<=). Это позволяет искать в строках некие
                         конструкции, перед которыми есть какие-то другие конструкции. Возможность опережающих проверок, использующая
@@ -348,32 +341,17 @@
                     строки. Без использования этого флага точка соответствует любому символу за исключением символа новой строки.</span>
                     <img class="content__block__img"  src="./pictures/regExp/img4.PNG" alt="picture">
                 </div>  
-                <div id="condOperator" class="content__block">
-                    <h3 class="content__block__title">Тернарный оператор</h3>
-                    <span class="content__block__text">Условный (тернарный) оператор
-                    Условный (тернарный) оператор - единственный оператор в JavaScript, принимающий три операнда: условие, за которым
-                    следует знак вопроса (?), затем выражение, которое выполняется, если условие истинно, сопровождается двоеточием (:), и,
-                    наконец, выражение, которое выполняется, если условие ложно. Он часто используется в качестве укороченного варианта
-                    условного оператора if.</span>
-                    <img class="content__block__img" src="./pictures/condOperator.PNG" alt="picture">
-                </div>
-                <div id="optChain" class="content__block">
+                <div class="content__block" id="optChain" >
                     <h3 class="content__block__title">Опциональная цепочка</h3>
                     <span class="content__block__text">Опциональная цепочка ?. — это безопасный способ доступа к свойствам вложенных объектов, даже если какое-либо из
                     промежуточных свойств не существует.</span>
                     <img class="content__block__img" src="./pictures/optionalChaining.PNG" alt="picture">
                 </div>
-                <div id="symbol" class="content__block">
+                <div class="content__block" id="symbol" >
                     <h3 class="content__block__title">Symbol</h3>
                     <span class="content__block__text">Свойство description только для чтения - это строка, возвращающая необязательное описание объектов Symbol.</span>
                     <img class="content__block__img" src="./pictures/symbol.PNG" alt="picture">
                 </div>
-                <div id="logicalOperation" class="content__block">
-                    <h3 class="content__block__title">Логические операторы</h3>
-                    <span class="content__block__text">Оператор И пишется как два амперсанда &&.</span>
-                    <img class="content__block__img" src="./pictures/logicalOperators.PNG" alt="picture">
-                </div>
-
         </div>
     </div>
 </main>
