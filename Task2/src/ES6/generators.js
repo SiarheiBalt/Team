@@ -18,9 +18,8 @@ const iterator = {
       next() {
         if (i < n) {
           return { value: ++i, done: false };
-        } else {
-          return { value: undefined, done: true };
         }
+        return { value: undefined, done: true };
       },
     };
   },

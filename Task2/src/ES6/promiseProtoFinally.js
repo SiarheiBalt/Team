@@ -1,8 +1,8 @@
 // Finally отработает в незвисимости от resolve или regect.
 
 const generatorNumber = () => Math.round(Math.random() * 10);
-let prom = new Promise((resolve, regect) => {
-  let n = generatorNumber();
+const prom = new Promise((resolve, regect) => {
+  const n = generatorNumber();
   n <= 5 ? resolve(n) : regect(n);
 })
   .then((value) => {
@@ -12,5 +12,5 @@ let prom = new Promise((resolve, regect) => {
     throw new Error(`Your number - ${value}`);
   })
   .finally(() => {
-    console.log("Finally");
+    console.log('Finally');
   });

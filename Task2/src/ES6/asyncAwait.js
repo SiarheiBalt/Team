@@ -6,9 +6,9 @@ async function loadData(url) {
   const data = await response.json();
   return data;
 }
-const userData = loadData("https://jsonplaceholder.typicode.com/users")
+const userData = loadData('https://jsonplaceholder.typicode.com/users')
   .then((user) => {
-    let userEvenId = [];
+    const userEvenId = [];
     user.forEach((el) => {
       if (el.id % 2 === 0) userEvenId.push(el);
     });
@@ -18,5 +18,5 @@ const userData = loadData("https://jsonplaceholder.typicode.com/users")
     console.log(user);
   })
   .catch(() => {
-    throw new Error("Noy connection");
+    throw new Error('Noy connection');
   });

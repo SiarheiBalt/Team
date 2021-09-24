@@ -12,22 +12,22 @@ const validator = {
       Reflect.set(target, prop, value);
     } else {
       console.log(
-        `Длинна должна быть более 2х символов. Сейчас ${value.length}`
+        `Длинна должна быть более 2х символов. Сейчас ${value.length}`,
       );
     }
   },
 };
 
 const form = {
-  login: "test",
-  password: "12345",
+  login: 'test',
+  password: '12345',
 };
 
 const formProxy = new Proxy(form, validator);
 
 console.log(formProxy.login); // test
-console.log(formProxy.password); //12345
-console.log(formProxy["name"]); //Поля name в объекте нет.
+console.log(formProxy.password); // 12345
+console.log(formProxy.name); // Поля name в объекте нет.
 
-formProxy.password = "12"; //Длинна должна быть более 2х символов. Сейчас 2
-console.log(formProxy.password); //12345
+formProxy.password = '12'; // Длинна должна быть более 2х символов. Сейчас 2
+console.log(formProxy.password); // 12345

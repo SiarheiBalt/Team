@@ -1,7 +1,7 @@
 // Symbol
 // Свойство description только для чтения - это строка, возвращающая необязательное описание объектов Symbol.
 
-const mySymbol = `My Symbol`;
+const mySymbol = 'My Symbol';
 const symObj = Symbol(mySymbol);
 
 console.log(symObj); // Symbol(mySymbol);

@@ -2,8 +2,8 @@
 // Он позволяет обрабатывать результаты асинхронных операций так, как если бы они были синхронными: вместо конечного результата асинхронного метода возвращается своего рода обещание получить результат в некоторый момент в будущем.
 
 const generatorNumber = () => Math.round(Math.random() * 10);
-let prom = new Promise((resolve, regect) => {
-  let n = generatorNumber();
+const prom = new Promise((resolve, regect) => {
+  const n = generatorNumber();
   n <= 5 ? resolve(n) : regect(n);
 })
   .then((value) => {
@@ -13,7 +13,7 @@ let prom = new Promise((resolve, regect) => {
     throw new Error(`Your number - ${value}`);
   })
   .finally(() => {
-    console.log("Finally"); // Отработает в любом случае
+    console.log('Finally'); // Отработает в любом случае
   });
 
 //  Promise all
@@ -26,17 +26,15 @@ const generatorDelay = () => {
   return delay > 5 ? (delay -= 5) : delay;
 };
 const getPromise = () => {
-  let delay = generatorDelay();
+  const delay = generatorDelay();
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(delay);
     }, delay * 1000);
   });
 };
-let prom1 = getPromise();
-let prom2 = getPromise();
-let prom3 = getPromise();
+const prom1 = getPromise();
+const prom2 = getPromise();
+const prom3 = getPromise();
 
-Promise.all([prom1, prom2, prom3]).then((value) =>
-  console.log(value.reduce((acc, el) => (acc += el)))
-);
+Promise.all([prom1, prom2, prom3]).then((value) => console.log(value.reduce((acc, el) => (acc += el))));

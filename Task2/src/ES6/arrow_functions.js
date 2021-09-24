@@ -7,15 +7,15 @@ function defer(f, ms) {
 }
 
 function sayHi(who) {
-  console.log("Hello, " + who);
+  console.log(`Hello, ${who}`);
 }
 
-let sayHiDeferred = defer(sayHi, 2000);
-sayHiDeferred("Den");
+const sayHiDeferred = defer(sayHi, 2000);
+sayHiDeferred('Den');
 
 // Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика this
 
-let elements = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+const elements = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
 
 elements.map((element) => element.length);
 
@@ -25,14 +25,12 @@ elements.map(({ length }) => length);
 
 // У стрелочных функций нет this. Если происходит обращение к this, его значение берётся снаружи.
 // Если бы мы использовали «обычную» функцию, была бы ошибка.
-let group = {
-  title: "Our Group",
-  students: ["John", "Pete", "Alice"],
+const group = {
+  title: 'Our Group',
+  students: ['John', 'Pete', 'Alice'],
 
   showList() {
-    this.students.forEach((student) =>
-      console.log(this.title + ": " + student)
-    );
+    this.students.forEach((student) => console.log(`${this.title}: ${student}`));
   },
 };
 
