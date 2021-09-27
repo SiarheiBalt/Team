@@ -13,7 +13,7 @@ const prom = new Promise((resolve, regect) => {
     throw new Error(`Your number - ${value}`);
   })
   .finally(() => {
-    console.log('Finally'); // Отработает в любом случае
+    console.log("Finally"); // Отработает в любом случае
   });
 
 //  Promise all
@@ -37,4 +37,18 @@ const prom1 = getPromise();
 const prom2 = getPromise();
 const prom3 = getPromise();
 
-Promise.all([prom1, prom2, prom3]).then((value) => console.log(value.reduce((acc, el) => (acc += el))));
+Promise.all([prom1, prom2, prom3]).then((value) =>
+  console.log(value.reduce((acc, el) => (acc += el)))
+);
+
+const promises = [
+  new Promise((resolve) => resolve(1)),
+  new Promise((resolve) => resolve(2)),
+  new Promise((resolve) => resolve(3)),
+];
+
+async function test() {
+  for await (const obj of promises) {
+    console.log(obj);
+  }
+}

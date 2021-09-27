@@ -17,7 +17,7 @@ body {
 }
 .content__block__img {
   width: fit-content;
-  margin: 10px 0px 15px;
+  margin: 15px auto;
   border-radius: 10px;
 }
 .content__block__title {

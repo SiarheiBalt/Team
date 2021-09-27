@@ -11,12 +11,12 @@ function sayHi(who) {
 }
 
 const sayHiDeferred = defer(sayHi, 2000);
-sayHiDeferred('Den');
+sayHiDeferred("Den");
 
 // Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика this
 
-const elements = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
-
+const example = (a) => a + 10;
+const elements = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 elements.map((element) => element.length);
 
 // В данном случае, поскольку нам нужно только свойство length, мы можем использовать деструктуризированный параметр:
@@ -26,11 +26,13 @@ elements.map(({ length }) => length);
 // У стрелочных функций нет this. Если происходит обращение к this, его значение берётся снаружи.
 // Если бы мы использовали «обычную» функцию, была бы ошибка.
 const group = {
-  title: 'Our Group',
-  students: ['John', 'Pete', 'Alice'],
+  title: "Our Group",
+  students: ["John", "Pete", "Alice"],
 
   showList() {
-    this.students.forEach((student) => console.log(`${this.title}: ${student}`));
+    this.students.forEach((student) =>
+      console.log(`${this.title}: ${student}`)
+    );
   },
 };
 
