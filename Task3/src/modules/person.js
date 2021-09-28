@@ -18,9 +18,14 @@ export class Customer extends Person {
       return false;
     } else {
       this.cash -= cost;
-      console.log(`${this.getFullName()} оплатил услугу.`);
+      console.log(
+        `Клиент ${this.getFullName()} оплатил услугу в размере ${cost}р.`
+      );
       return true;
     }
+  }
+  getCash() {
+    return this.cash;
   }
 }
 export class StudioWorker extends Person {
@@ -29,18 +34,20 @@ export class StudioWorker extends Person {
 export class Worker extends StudioWorker {
   speciality = "Рабочий студии";
   roomCleaning() {
-    console.log(`${this.speciality} убрал в комнате.`);
+    console.log(`${this.speciality} ${this.getFullName()} убрал в комнате.`);
   }
 }
 export class Administrator extends StudioWorker {
   speciality = "Администратор";
   roomRent() {
     console.log(
-      `${this.speciality} предоставил в аренду комнату для репетиции.`
+      `${
+        this.speciality
+      } ${this.getFullName()} предоставил(а) в аренду комнату для репетиции.`
     );
   }
 }
-export class soundEngineer extends StudioWorker {
+export class SoundEngineer extends StudioWorker {
   speciality = "Инженер";
   guitarTuning() {}
 }
