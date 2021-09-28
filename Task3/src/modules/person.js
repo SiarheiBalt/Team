@@ -14,7 +14,7 @@ export class Customer extends Person {
   }
   takeCash(cost) {
     if (this.cash - cost < 0) {
-      console.log('Недостаточно средств');
+      console.log("Недостаточно средств");
       return false;
     } else {
       this.cash -= cost;
@@ -24,16 +24,23 @@ export class Customer extends Person {
   }
 }
 export class StudioWorker extends Person {
-  constructor(firstName, lastName, speciality) {
-    super(firstName, lastName);
-    this.speciality = speciality;
-  }
+  isStudioWorker = true;
+}
+export class Worker extends StudioWorker {
+  speciality = "Рабочий студии";
   roomCleaning() {
     console.log(`${this.speciality} убрал в комнате.`);
   }
+}
+export class Administrator extends StudioWorker {
+  speciality = "Администратор";
   roomRent() {
     console.log(
       `${this.speciality} предоставил в аренду комнату для репетиции.`
     );
   }
+}
+export class soundEngineer extends StudioWorker {
+  speciality = "Инженер";
+  guitarTuning() {}
 }
