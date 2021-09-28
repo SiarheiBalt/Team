@@ -1,9 +1,9 @@
-const arr = [0, 1, 2];
+const array = [0, 1, 2];
 
-console.log(arr); // [0, 1, 2]
-console.log(arr.length); // 3
+console.log(array); // [0, 1, 2]
+console.log(array.length); // 3
 
-const arr2 = [0, 1, 2, , ,];
-console.log(arr2.length); // 5
-arr2.forEach((e) => console.log(e)); // 0 1 2
-console.log(arr.map((e) => e)); // 0 1 2
+const array2 = [0, 1, 2, , ,];
+console.log(array2.length); // 5
+array2.forEach((element) => console.log(element)); // 0 1 2
+console.log(array.map((element) => element)); // 0 1 2
