@@ -1,34 +1,52 @@
-import { Amp, Computer, Drums, Guitar } from "./equipment.js";
-import { Administrator, Worker, SoundEngineer } from "./person.js";
+import { amp, computer, drums, guitar } from './equipment.js';
+import { administrator, engineer, worker } from './person.js';
+import { bigRoom, smallRoom } from './room.js';
 
 export class RecordingStudio {
-  constructor(name) {
+  constructor(
+    name,
+    engineer,
+    administrator,
+    worker,
+    big,
+    small,
+    guitar,
+    drums,
+    computer,
+    amp
+  ) {
     this.name = name;
     this.salary = 0;
     this.rooms = {
-      big: new Room("white", 25),
-      small: new Room("black", 20),
+      big,
+      small,
     };
     this.employees = {
-      engineer: new SoundEngineer("Денис", "Петров", "Инженер"),
-      administrator: new Administrator("Елена", "Денисова", "Администратор"),
-      worker: new Worker("Костя", "Рыбик", "Рабочий студии"),
+      engineer,
+      administrator,
+      worker,
     };
     this.customers = [];
     this.equip = {
-      guitar: new Guitar("black", 2000, "Japan", 15, "guitar", 6),
-      drums: new Drums("White", 2013, "China", 30, "drums", 5),
-      computer: new Computer("white", "Integrall", 2019, "компьютер"),
-      amp: new Amp("black", "Marshall", 1995, "усилитель"),
+      guitar,
+      drums,
+      computer,
+      amp,
     };
     this.recordingPrice = 50;
   }
   inviteCustomer(customer) {
-    console.log(`Клиент ${customer.getFullName()} приглашен на студию.`);
-    this.customers = [...this.customers, customer.getFullName()];
+    if (this.customers.some((client) => client === customer.getFullName())) {
+      console.log(`Клиент ${customer.getFullName()} уже находится на студии.`);
+    } else {
+      console.log(`Клиент ${customer.getFullName()} приглашен на студию.`);
+      // Записываю приглашенного пользователя в массив
+      this.customers = [...this.customers, customer.getFullName()];
+    }
   }
   escortCustomer(customer) {
     console.log(`Клиент ${customer.getFullName()} покидает студию.`);
+    // Удаляю приглашенного пльзователя из массива
     this.customers = this.customers.reduce((acc, client) => {
       if (customer.getFullName() !== client) acc.push(client);
       return acc;
@@ -94,7 +112,7 @@ export class RecordingStudio {
       this.rooms[room].vacateRoom();
     }
   }
-  songRecording(customer, room) {
+  songRecording(customer) {
     console.log(`Клиент ${customer.getFullName()} хочет записать трек.`);
     customer.takeCash.call(customer, this.recordingPrice);
     this.addSalary(this.recordingPrice);
@@ -111,21 +129,15 @@ export class RecordingStudio {
   }
 }
 
-export class Room {
-  constructor(color, roomRentPrice) {
-    this.roomRentPrice = roomRentPrice;
-    this.color = color;
-    this.isFree = true;
-    this.customer = null;
-  }
-  reserveRoom(customer) {
-    this.isFree = false;
-    console.log(`Комната зарезервирована клиентом ${customer}`);
-    this.customer = customer;
-  }
-  vacateRoom() {
-    this.isFree = true;
-    console.log("Комната свободна");
-    this.customer = null;
-  }
-}
+export const bestSound = new RecordingStudio(
+  'Best Sound',
+  engineer,
+  administrator,
+  worker,
+  bigRoom,
+  smallRoom,
+  guitar,
+  drums,
+  computer,
+  amp
+);

@@ -7,14 +7,14 @@ class Person {
     return `${this.firstName} ${this.lastName}`;
   }
 }
-export class Customer extends Person {
+class Customer extends Person {
   constructor(firstName, lastName, cash) {
     super(firstName, lastName);
     this.cash = cash;
   }
   takeCash(cost) {
     if (this.cash - cost < 0) {
-      console.log("Недостаточно средств");
+      console.log('Недостаточно средств');
       return false;
     } else {
       this.cash -= cost;
@@ -28,23 +28,22 @@ export class Customer extends Person {
     return this.cash;
   }
 }
-export class StudioWorker extends Person {
+class StudioWorker extends Person {
   constructor(firstName, lastName, speciality) {
     super(firstName, lastName);
     this.speciality = speciality;
-    this.isStudioWorker = true;
   }
 
   work() {
     console.log(`Работник студии начинает работать.`);
   }
 }
-export class Worker extends StudioWorker {
+class Worker extends StudioWorker {
   roomCleaning() {
     console.log(`${this.speciality} ${this.getFullName()} убрал в комнате.`);
   }
 }
-export class Administrator extends StudioWorker {
+class Administrator extends StudioWorker {
   roomRent() {
     console.log(
       `${
@@ -56,7 +55,7 @@ export class Administrator extends StudioWorker {
     console.log(`${this.speciality} выдал ${equip} клиенту.`);
   }
 }
-export class SoundEngineer extends StudioWorker {
+class SoundEngineer extends StudioWorker {
   checkInstrument(instrument) {
     console.log(`Инженер проверяет инструмент ${instrument}`);
   }
@@ -73,3 +72,13 @@ export class SoundEngineer extends StudioWorker {
     console.log(`Инженер записал трек, предоставил его клиенту.`);
   }
 }
+
+export const worker = new Worker('Костя', 'Рыбик', 'Рабочий студии');
+export const engineer = new SoundEngineer('Денис', 'Петров', 'Инженер');
+export const administrator = new Administrator(
+  'Елена',
+  'Денисова',
+  'Администратор'
+);
+
+export const customer = new Customer('Григорий', 'Хомич', 100);

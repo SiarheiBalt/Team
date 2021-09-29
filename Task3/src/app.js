@@ -1,30 +1,30 @@
-import { Customer } from "./modules/person.js";
-import { RecordingStudio } from "./modules/studio.js";
+import { customer } from './modules/person.js';
+import { bestSound } from './modules/studio.js';
 
-const bestSound = new RecordingStudio("Best Sound");
+document.querySelector('#invite').addEventListener('click', () => {
+  // Пригласить клиента на студию
+  bestSound.inviteCustomer(customer);
+});
 
-const customer = new Customer("Григорий", "Хомич", 100);
-const customer1 = new Customer("Алексей", "Петрович", 120);
-
-// Пригласить клиента на студию
-bestSound.inviteCustomer(customer);
-// bestSound.inviteCustomer(customer1);
+document.querySelector('#roomRent').addEventListener('click', () => {
+  // Услуга аренда комнаты для репетиции
+  bestSound.roomRent('small', customer);
+});
 
 // Аренда инструмента
-// bestSound.equipRent("guitar", customer);
-// Возврат инструмента
-// bestSound.returnEquip("guitar");
+// bestSound.equipRent('guitar', customer);
 
-// Услуга аренда комнаты для репетиции
-bestSound.roomRent("small", customer);
+// Возврат инструмента
+// bestSound.returnEquip('guitar');
 
 // Освободить комнату после аренды
-// bestSound.leftRoom("small");
+// bestSound.leftRoom('small');
 
 // Проводить клиента из студии
 // bestSound.escortCustomer(customer);
 
 // Проверка инструмента
-// bestSound.checkInstrument("guitar");
+// bestSound.checkInstrument('guitar');
 
-bestSound.songRecording(customer, "big");
+// Запись трека
+// bestSound.songRecording(customer, 'big');

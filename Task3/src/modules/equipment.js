@@ -1,4 +1,4 @@
-export class MusicalEquip {
+class MusicalEquip {
   constructor(color, years, manufacture) {
     this.color = color;
     this.productionYears = years;
@@ -24,11 +24,11 @@ class RecordingEquip extends MusicalEquip {
   }
 }
 
-export class Amp extends RecordingEquip {}
+class Amp extends RecordingEquip {}
 
-export class Computer extends RecordingEquip {}
+class Computer extends RecordingEquip {}
 
-export class MusicalInstrument extends MusicalEquip {
+class MusicalInstrument extends MusicalEquip {
   constructor(color, years, manufacture, rentPrice, name) {
     super(color, years, manufacture);
     this.rentPrice = rentPrice;
@@ -57,7 +57,7 @@ export class MusicalInstrument extends MusicalEquip {
   }
   play() {
     this.needTune = true;
-    console.log("Клиент занимается на инструменте.");
+    console.log('Клиент занимается на инструменте.');
   }
   checkTune() {
     if (this.needTune) {
@@ -73,16 +73,21 @@ export class MusicalInstrument extends MusicalEquip {
   }
 }
 
-export class Guitar extends MusicalInstrument {
+class Guitar extends MusicalInstrument {
   constructor(color, years, manufacture, rentPrice, name, numberOfStrings) {
     super(color, years, manufacture, rentPrice, name);
     this.numberOfStrings = numberOfStrings;
   }
 }
 
-export class Drums extends MusicalInstrument {
+class Drums extends MusicalInstrument {
   constructor(color, years, manufacture, rentPrice, name, numberOfDrums) {
     super(color, years, manufacture, rentPrice, name);
     this.numberOfDrums = numberOfDrums;
   }
 }
+
+export const guitar = new Guitar('black', 2000, 'Japan', 15, 'guitar', 6);
+export const drums = new Drums('White', 2013, 'China', 30, 'drums', 5);
+export const computer = new Computer('white', 'Integrall', 2019, 'компьютер');
+export const amp = new Amp('black', 'Marshall', 1995, 'усилитель');
