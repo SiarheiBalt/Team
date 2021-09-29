@@ -1,4 +1,4 @@
-import { Drums, Guitar } from "./equipment.js";
+import { Amp, Computer, Drums, Guitar } from "./equipment.js";
 import { Administrator, Worker, SoundEngineer } from "./person.js";
 
 export class RecordingStudio {
@@ -18,7 +18,10 @@ export class RecordingStudio {
     this.equip = {
       guitar: new Guitar("black", 2000, "Japan", 15, "guitar", 6),
       drums: new Drums("White", 2013, "China", 30, "drums", 5),
+      computer: new Computer("white", "Integrall", 2019, "компьютер"),
+      amp: new Amp("black", "Marshall", 1995, "усилитель"),
     };
+    this.recordingPrice = 50;
   }
   inviteCustomer(customer) {
     console.log(`Клиент ${customer.getFullName()} приглашен на студию.`);
@@ -54,6 +57,13 @@ export class RecordingStudio {
   returnEquip(instrument) {
     this.equip[instrument].returnInstrument(instrument);
   }
+  checkInstrument(instrument) {
+    this.employees.engineer.checkInstrument(instrument);
+    if (this.equip[instrument].checkTune()) {
+      this.employees.engineer.tuningInstruments(instrument);
+      this.equip[instrument].tunning();
+    }
+  }
   roomRent(room, customer) {
     if (this.rooms[room].isFree) {
       this.employees.administrator.work();
@@ -83,6 +93,21 @@ export class RecordingStudio {
       this.employees.worker.roomCleaning();
       this.rooms[room].vacateRoom();
     }
+  }
+  songRecording(customer, room) {
+    console.log(`Клиент ${customer.getFullName()} хочет записать трек.`);
+    customer.takeCash.call(customer, this.recordingPrice);
+    this.addSalary(this.recordingPrice);
+    this.employees.engineer.work();
+    this.employees.engineer.turnOnEquip(this.equip.computer.name);
+    this.equip.computer.turnOn();
+    this.employees.engineer.turnOnEquip(this.equip.amp.name);
+    this.equip.amp.turnOn();
+    this.employees.engineer.recordingSong();
+    this.employees.engineer.turnOfEquip(this.equip.computer.name);
+    this.equip.computer.turnOf();
+    this.employees.engineer.turnOfEquip(this.equip.amp.name);
+    this.equip.amp.turnOf();
   }
 }
 

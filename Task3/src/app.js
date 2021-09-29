@@ -11,14 +11,20 @@ bestSound.inviteCustomer(customer);
 // bestSound.inviteCustomer(customer1);
 
 // Аренда инструмента
-bestSound.rentEquip("guitar", customer);
-bestSound.returnEquip("guitar");
+// bestSound.rentEquip("guitar", customer);
+// Возврат инструмента
+// bestSound.returnEquip("guitar");
 
 // Услуга аренда комнаты для репетиции
-// bestSound.roomRent("small", customer);
+bestSound.roomRent("small", customer);
 
 // Освободить комнату после аренды
 // bestSound.leftRoom("small");
 
 // Проводить клиента из студии
 // bestSound.escortCustomer(customer);
+
+// Проверка инструмента
+// bestSound.checkInstrument("guitar");
+
+bestSound.songRecording(customer, "big");

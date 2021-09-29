@@ -8,6 +8,26 @@ export class MusicalEquip {
   }
 }
 
+class RecordingEquip extends MusicalEquip {
+  constructor(color, years, manufacture, name) {
+    super(color, years, manufacture);
+    this.isOn = false;
+    this.name = name;
+  }
+  turnOn() {
+    this.isOn = true;
+    console.log(`${this.name} включен.`);
+  }
+  turnOf() {
+    this.isOn = false;
+    console.log(`${this.name} выключен.`);
+  }
+}
+
+export class Amp extends RecordingEquip {}
+
+export class Computer extends RecordingEquip {}
+
 export class MusicalInstrument extends MusicalEquip {
   constructor(color, years, manufacture, rentPrice, name) {
     super(color, years, manufacture);
@@ -44,9 +64,13 @@ export class MusicalInstrument extends MusicalEquip {
     if (this.needTune) {
       console.log(`Инструмент ${this.name} нуждается в настройке`);
     } else {
-      console.log(`Инструмент настроен.`);
+      console.log(`Инструмент в настройке не нуждается.`);
     }
     return this.needTune;
+  }
+  tunning() {
+    console.log(`Инструмент настроен`);
+    this.needTune = false;
   }
 }
 
@@ -55,17 +79,11 @@ export class Guitar extends MusicalInstrument {
     super(color, years, manufacture, rentPrice, name);
     this.numberOfStrings = numberOfStrings;
   }
-
-  tune(engineer) {
-    console.log(`настройка гитары`);
-  }
 }
 
 export class Drums extends MusicalInstrument {
-  constructor(color, years, manufacture, rentPrice, name, numberOfStrings) {
+  constructor(color, years, manufacture, rentPrice, name, numberOfDrums) {
     super(color, years, manufacture, rentPrice, name);
-  }
-  tune(engineer) {
-    console.log("настройка барабанов");
+    this.numberOfDrums = numberOfDrums;
   }
 }
