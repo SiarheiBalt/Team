@@ -29,19 +29,22 @@ export class Customer extends Person {
   }
 }
 export class StudioWorker extends Person {
-  isStudioWorker = true;
+  constructor(firstName, lastName, speciality) {
+    super(firstName, lastName);
+    this.speciality = speciality;
+    this.isStudioWorker = true;
+  }
+
   work() {
     console.log(`Работник студии начинает работать.`);
   }
 }
 export class Worker extends StudioWorker {
-  speciality = "Рабочий студии";
   roomCleaning() {
     console.log(`${this.speciality} ${this.getFullName()} убрал в комнате.`);
   }
 }
 export class Administrator extends StudioWorker {
-  speciality = "Администратор";
   roomRent() {
     console.log(
       `${
@@ -49,12 +52,11 @@ export class Administrator extends StudioWorker {
       } ${this.getFullName()} предоставил(а) в аренду комнату для репетиции.`
     );
   }
-  rentEquip(equip) {
+  equipRent(equip) {
     console.log(`${this.speciality} выдал ${equip} клиенту.`);
   }
 }
 export class SoundEngineer extends StudioWorker {
-  speciality = "Инженер";
   checkInstrument(instrument) {
     console.log(`Инженер проверяет инструмент ${instrument}`);
   }

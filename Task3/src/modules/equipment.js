@@ -33,7 +33,6 @@ export class MusicalInstrument extends MusicalEquip {
     super(color, years, manufacture);
     this.rentPrice = rentPrice;
     this.name = name;
-    this.rentPrice = rentPrice;
     this.needTune = false;
   }
 

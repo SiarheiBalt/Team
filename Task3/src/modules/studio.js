@@ -10,9 +10,9 @@ export class RecordingStudio {
       small: new Room("black", 20),
     };
     this.employees = {
-      engineer: new SoundEngineer("Денис", "Петров"),
-      administrator: new Administrator("Елена", "Денисова"),
-      worker: new Worker("Костя", "Рыбик"),
+      engineer: new SoundEngineer("Денис", "Петров", "Инженер"),
+      administrator: new Administrator("Елена", "Денисова", "Администратор"),
+      worker: new Worker("Костя", "Рыбик", "Рабочий студии"),
     };
     this.customers = [];
     this.equip = {
@@ -34,7 +34,7 @@ export class RecordingStudio {
       return acc;
     }, []);
   }
-  rentEquip(instrument, customer) {
+  equipRent(instrument, customer) {
     console.log(`Клиент хочет арендовать инструмент ${instrument}`);
     this.employees.administrator.work();
     if (this.equip[instrument].isFree) {
@@ -42,7 +42,7 @@ export class RecordingStudio {
         customer.getFullName.call(customer)
       );
       customer.takeCash(this.equip[instrument].rentPrice);
-      this.employees.administrator.rentEquip(instrument);
+      this.employees.administrator.equipRent(instrument);
       this.addSalary(this.equip[instrument].rentPrice);
       console.log(
         `Инструмент ${instrument} в распоряжении клиента в течении 2х часов.`

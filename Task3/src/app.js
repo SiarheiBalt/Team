@@ -11,7 +11,7 @@ bestSound.inviteCustomer(customer);
 // bestSound.inviteCustomer(customer1);
 
 // Аренда инструмента
-// bestSound.rentEquip("guitar", customer);
+// bestSound.equipRent("guitar", customer);
 // Возврат инструмента
 // bestSound.returnEquip("guitar");
 
