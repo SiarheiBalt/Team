@@ -1,4 +1,4 @@
-export class MusicalInstruments {
+export class MusicalEquip {
   constructor(color, years, manufacture) {
     this.color = color;
     this.productionYears = years;
@@ -6,6 +6,17 @@ export class MusicalInstruments {
     this.isFree = true;
     this.customer = null;
   }
+}
+
+export class MusicalInstrument extends MusicalEquip {
+  constructor(color, years, manufacture, rentPrice, name) {
+    super(color, years, manufacture);
+    this.rentPrice = rentPrice;
+    this.name = name;
+    this.rentPrice = rentPrice;
+    this.needTune = false;
+  }
+
   reserveInstruments(customer) {
     if (this.isFree) {
       this.isFree = false;
@@ -25,28 +36,36 @@ export class MusicalInstruments {
     this.isFree = true;
     this.customer = null;
   }
+  play() {
+    this.needTune = true;
+    console.log("Клиент занимается на инструменте.");
+  }
+  checkTune() {
+    if (this.needTune) {
+      console.log(`Инструмент ${this.name} нуждается в настройке`);
+    } else {
+      console.log(`Инструмент настроен.`);
+    }
+    return this.needTune;
+  }
 }
 
-export class Guitar extends MusicalInstruments {
-  constructor(color, years, manufacture, numberOfStrings, rentPrice) {
-    super(color, years, manufacture);
+export class Guitar extends MusicalInstrument {
+  constructor(color, years, manufacture, rentPrice, name, numberOfStrings) {
+    super(color, years, manufacture, rentPrice, name);
     this.numberOfStrings = numberOfStrings;
-    this.name = 'guitar';
-    this.rentPrice = rentPrice;
   }
+
   tune(engineer) {
     console.log(`настройка гитары`);
   }
 }
 
-export class Drums extends MusicalInstruments {
-  constructor(color, years, manufacture, numbersOfDrams, rentPrice) {
-    super(color, years, manufacture);
-    this.numbersOfDrams = numbersOfDrams;
-    this.name = 'drums';
-    this.rentPrice = rentPrice;
+export class Drums extends MusicalInstrument {
+  constructor(color, years, manufacture, rentPrice, name, numberOfStrings) {
+    super(color, years, manufacture, rentPrice, name);
   }
   tune(engineer) {
-    console.log('настройка барабанов');
+    console.log("настройка барабанов");
   }
 }
