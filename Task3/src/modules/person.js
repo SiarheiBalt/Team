@@ -14,7 +14,7 @@ class Customer extends Person {
   }
   takeCash(cost) {
     if (this.cash - cost < 0) {
-      console.log('Недостаточно средств');
+      console.log("Недостаточно средств");
       return false;
     } else {
       this.cash -= cost;
@@ -73,12 +73,13 @@ class SoundEngineer extends StudioWorker {
   }
 }
 
-export const worker = new Worker('Костя', 'Рыбик', 'Рабочий студии');
-export const engineer = new SoundEngineer('Денис', 'Петров', 'Инженер');
+export const worker = new Worker("Костя", "Рыбик", "Рабочий студии");
+export const engineer = new SoundEngineer("Денис", "Петров", "Инженер");
 export const administrator = new Administrator(
-  'Елена',
-  'Денисова',
-  'Администратор'
+  "Елена",
+  "Денисова",
+  "Администратор"
 );
 
-export const customer = new Customer('Григорий', 'Хомич', 100);
+export const firstCustomer = new Customer("Григорий", "Хомич", 100);
+export const secondCustomer = new Customer("Денис", "Иванов", 50);

@@ -11,11 +11,49 @@
   <body>
     <div class="container-content">
       <div class="content">
-        <button class="button-content" id="invite">Пригласить клиента</button>
-
-        <button class="button-content" id="roomRent">
-          Клиент арендует комнату
-        </button>
+        <form class="form" action="select"> Выбрать клиента № <select class="rorm__select" name="select" id="invateForm">
+            <option value="1"> 1</option>
+            <option value="2"> 2</option>
+          </select>
+          <span>Выбрать комнату</span>
+          <select class="rorm__select" name="select" id="roomForm">
+            <option value="big"> большая</option>
+            <option value="small"> малая</option>
+          </select>
+          <span>Выбрать инструмент</span>
+          <select class="rorm__select" name="select" id="instrumentForm">
+            <option value="guitar"> гитара</option>
+            <option value="drums"> барабаны</option>
+          </select>
+        </form>
+        <div class="content__buttons">
+          <button class="button" id="invite">Пригласить клиента</button>
+          <button class="button" id="roomRent">
+            Клиент арендует комнату
+          </button>
+          <button class="button" id="leftRoom">
+            Клиент покидает комнату
+          </button>
+          <button class="button" id="leftStudio">
+            Клиент покидает студию
+          </button>
+          <button class="button" id="equipRent">
+            Аренда оборудования
+          </button>
+          <button class="button" id="returnEquip">
+            Вернуть оборудование
+          </button> 
+          <button class="button" id="checkInstrument">
+            Проверить инструмент
+          </button>      
+          <button class="button" id="recordingSong">
+            Запись трека
+          </button>
+        </div>
+        <div class="studio-content">
+          
+        </div>
+          
       </div>
     </div>
     <script type="module" src="./app.js"></script>

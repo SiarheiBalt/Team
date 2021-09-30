@@ -1,6 +1,6 @@
-import { amp, computer, drums, guitar } from './equipment.js';
-import { administrator, engineer, worker } from './person.js';
-import { bigRoom, smallRoom } from './room.js';
+import { amp, computer, drums, guitar } from "./equipment.js";
+import { administrator, engineer, worker } from "./person.js";
+import { bigRoom, smallRoom } from "./room.js";
 
 export class RecordingStudio {
   constructor(
@@ -45,6 +45,7 @@ export class RecordingStudio {
     }
   }
   escortCustomer(customer) {
+    if (this.checkCustomers()) return;
     console.log(`Клиент ${customer.getFullName()} покидает студию.`);
     // Удаляю приглашенного пльзователя из массива
     this.customers = this.customers.reduce((acc, client) => {
@@ -53,6 +54,7 @@ export class RecordingStudio {
     }, []);
   }
   equipRent(instrument, customer) {
+    if (this.checkCustomers()) return;
     console.log(`Клиент хочет арендовать инструмент ${instrument}`);
     this.employees.administrator.work();
     if (this.equip[instrument].isFree) {
@@ -83,6 +85,7 @@ export class RecordingStudio {
     }
   }
   roomRent(room, customer) {
+    if (this.checkCustomers()) return;
     if (this.rooms[room].isFree) {
       this.employees.administrator.work();
       this.employees.administrator.roomRent();
@@ -96,7 +99,8 @@ export class RecordingStudio {
       );
     }
   }
-  checkCustomers() {
+  getCustomers() {
+    // Получить массив из клиентов находящихся на студии
     return this.customer;
   }
   addSalary(cash) {
@@ -113,6 +117,7 @@ export class RecordingStudio {
     }
   }
   songRecording(customer) {
+    if (this.checkCustomers()) return;
     console.log(`Клиент ${customer.getFullName()} хочет записать трек.`);
     customer.takeCash.call(customer, this.recordingPrice);
     this.addSalary(this.recordingPrice);
@@ -127,10 +132,15 @@ export class RecordingStudio {
     this.employees.engineer.turnOfEquip(this.equip.amp.name);
     this.equip.amp.turnOf();
   }
+  checkCustomers() {
+    // Проверка есть ли на студии клиенты
+    if (this.customers.length === 0) console.log(`На студии клиентов нет`);
+    return this.customers.length === 0;
+  }
 }
 
 export const bestSound = new RecordingStudio(
-  'Best Sound',
+  "Best Sound",
   engineer,
   administrator,
   worker,

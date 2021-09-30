@@ -1,30 +1,51 @@
-import { customer } from './modules/person.js';
-import { bestSound } from './modules/studio.js';
+import { firstCustomer, secondCustomer } from "./modules/person.js";
+import { bestSound } from "./modules/studio.js";
 
-document.querySelector('#invite').addEventListener('click', () => {
-  // Пригласить клиента на студию
-  bestSound.inviteCustomer(customer);
+const instrumentSelect = document.querySelector("#instrumentForm");
+const clientSelect = document.querySelector("#invateForm");
+const roomSelect = document.querySelector("#roomForm");
+
+const studio = document.querySelector(".studio-content");
+
+const getClient = () =>
+  clientSelect.value === "1" ? firstCustomer : secondCustomer;
+
+document.body.addEventListener("click", (event) => {
+  switch (event.target.id) {
+    case "invite":
+      // Пригласить клиента на студию
+      bestSound.inviteCustomer(getClient());
+      return;
+    case "roomRent":
+      // Услуга аренда комнаты для репетиции
+      bestSound.roomRent(roomSelect.value, getClient());
+
+      return;
+    case "leftRoom":
+      // Клиент покидает комнату
+      bestSound.leftRoom(roomSelect.value, getClient());
+      return;
+    case "leftStudio":
+      // Клиент покидает комнату
+      bestSound.escortCustomer(getClient());
+      return;
+    case "equipRent":
+      // Взять в аренду оборудование
+      bestSound.equipRent(instrumentSelect.value, getClient());
+      return;
+    case "returnEquip":
+      // Вернуть оборудование
+      bestSound.returnEquip(instrumentSelect.value, getClient());
+      return;
+    case "checkInstrument":
+      // проверка инструмента
+      bestSound.checkInstrument(instrumentSelect.value);
+      return;
+    case "recordingSong":
+      // Запись трека
+      bestSound.songRecording(getClient(), roomSelect.value);
+      return;
+    default:
+      break;
+  }
 });
-
-document.querySelector('#roomRent').addEventListener('click', () => {
-  // Услуга аренда комнаты для репетиции
-  bestSound.roomRent('small', customer);
-});
-
-// Аренда инструмента
-// bestSound.equipRent('guitar', customer);
-
-// Возврат инструмента
-// bestSound.returnEquip('guitar');
-
-// Освободить комнату после аренды
-// bestSound.leftRoom('small');
-
-// Проводить клиента из студии
-// bestSound.escortCustomer(customer);
-
-// Проверка инструмента
-// bestSound.checkInstrument('guitar');
-
-// Запись трека
-// bestSound.songRecording(customer, 'big');
