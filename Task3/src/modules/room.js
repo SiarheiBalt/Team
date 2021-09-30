@@ -1,7 +1,7 @@
 class Room {
-  constructor(color, roomRentPrice) {
+  constructor(size, roomRentPrice) {
     this.roomRentPrice = roomRentPrice;
-    this.color = color;
+    this.size = size;
     this.isFree = true;
     this.customer = null;
   }
@@ -12,10 +12,10 @@ class Room {
   }
   vacateRoom() {
     this.isFree = true;
-    console.log("Комната свободна");
+    console.log('Комната свободна');
     this.customer = null;
   }
 }
 
-export const bigRoom = new Room("white", 25);
-export const smallRoom = new Room("black", 20);
+export const bigRoom = new Room('big', 25);
+export const smallRoom = new Room('small', 20);

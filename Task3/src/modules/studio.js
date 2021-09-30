@@ -1,6 +1,6 @@
-import { amp, computer, drums, guitar } from "./equipment.js";
-import { administrator, engineer, worker } from "./person.js";
-import { bigRoom, smallRoom } from "./room.js";
+import { amp, computer, drums, guitar } from './equipment.js';
+import { administrator, engineer, worker } from './person.js';
+import { bigRoom, smallRoom } from './room.js';
 
 export class RecordingStudio {
   constructor(
@@ -95,7 +95,7 @@ export class RecordingStudio {
       console.log(`Комната в распоряжении клиента в течении 2х часов`);
     } else {
       console.log(
-        `Комната ${this.rooms[room].color} занята клиентом ${this.rooms[room].customer}, смотрите свободна ли другая комната`
+        `Комната ${this.rooms[room].size} занята клиентом ${this.rooms[room].customer}, смотрите свободна ли другая комната`
       );
     }
   }
@@ -150,7 +150,7 @@ export class RecordingStudio {
 }
 
 export const bestSound = new RecordingStudio(
-  "Best Sound",
+  'Best Sound',
   engineer,
   administrator,
   worker,

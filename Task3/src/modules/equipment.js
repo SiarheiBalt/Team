@@ -61,7 +61,7 @@ class MusicalInstrument extends MusicalEquip {
   }
   play() {
     this.needTune = true;
-    console.log("Клиент занимается на инструменте.");
+    console.log('Клиент занимается на инструменте.');
   }
   checkTune() {
     if (this.needTune) {
@@ -91,7 +91,7 @@ class Drums extends MusicalInstrument {
   }
 }
 
-export const guitar = new Guitar("black", 2000, "Japan", 15, "guitar", 6);
-export const drums = new Drums("White", 2013, "China", 30, "drums", 5);
-export const computer = new Computer("white", "Integrall", 2019, "компьютер");
-export const amp = new Amp("black", "Marshall", 1995, "усилитель");
+export const guitar = new Guitar('black', 2000, 'Japan', 15, 'гитара', 6);
+export const drums = new Drums('White', 2013, 'China', 30, 'барабаны', 5);
+export const computer = new Computer('white', 'Integrall', 2019, 'компьютер');
+export const amp = new Amp('black', 'Marshall', 1995, 'усилитель');
