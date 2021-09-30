@@ -118,19 +118,29 @@ export class RecordingStudio {
   }
   songRecording(customer) {
     if (this.checkCustomers()) return;
-    console.log(`Клиент ${customer.getFullName()} хочет записать трек.`);
-    customer.takeCash.call(customer, this.recordingPrice);
-    this.addSalary(this.recordingPrice);
-    this.employees.engineer.work();
-    this.employees.engineer.turnOnEquip(this.equip.computer.name);
-    this.equip.computer.turnOn();
-    this.employees.engineer.turnOnEquip(this.equip.amp.name);
-    this.equip.amp.turnOn();
-    this.employees.engineer.recordingSong();
-    this.employees.engineer.turnOfEquip(this.equip.computer.name);
-    this.equip.computer.turnOf();
-    this.employees.engineer.turnOfEquip(this.equip.amp.name);
-    this.equip.amp.turnOf();
+    // Проверка, арендована ли комната данным пользователем.
+    for (const key in this.rooms) {
+      if (this.rooms[key].customer === customer.getFullName()) {
+        console.log(customer.getFullName());
+        console.log(`Клиент ${customer.getFullName()} хочет записать трек.`);
+        customer.takeCash.call(customer, this.recordingPrice);
+        this.addSalary(this.recordingPrice);
+        this.employees.engineer.work();
+        this.employees.engineer.turnOnEquip(this.equip.computer.name);
+        this.equip.computer.turnOn();
+        this.employees.engineer.turnOnEquip(this.equip.amp.name);
+        this.equip.amp.turnOn();
+        this.employees.engineer.recordingSong();
+        this.employees.engineer.turnOfEquip(this.equip.computer.name);
+        this.equip.computer.turnOf();
+        this.employees.engineer.turnOfEquip(this.equip.amp.name);
+        this.equip.amp.turnOf();
+        return;
+      } else {
+        console.log(`Арендуйте комнату для записи.`);
+        return;
+      }
+    }
   }
   checkCustomers() {
     // Проверка есть ли на студии клиенты

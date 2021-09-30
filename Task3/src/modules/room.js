@@ -12,10 +12,10 @@ class Room {
   }
   vacateRoom() {
     this.isFree = true;
-    console.log('Комната свободна');
+    console.log("Комната свободна");
     this.customer = null;
   }
 }
 
-export const bigRoom = new Room('white', 25);
-export const smallRoom = new Room('black', 20);
+export const bigRoom = new Room("white", 25);
+export const smallRoom = new Room("black", 20);

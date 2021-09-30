@@ -5,8 +5,6 @@ const instrumentSelect = document.querySelector("#instrumentForm");
 const clientSelect = document.querySelector("#invateForm");
 const roomSelect = document.querySelector("#roomForm");
 
-const studio = document.querySelector(".studio-content");
-
 const getClient = () =>
   clientSelect.value === "1" ? firstCustomer : secondCustomer;
 
@@ -19,7 +17,6 @@ document.body.addEventListener("click", (event) => {
     case "roomRent":
       // Услуга аренда комнаты для репетиции
       bestSound.roomRent(roomSelect.value, getClient());
-
       return;
     case "leftRoom":
       // Клиент покидает комнату
