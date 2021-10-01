@@ -1,6 +1,14 @@
-import { amp, computer, drums, guitar } from './equipment.js';
-import { administrator, engineer, worker } from './person.js';
-import { bigRoom, smallRoom } from './room.js';
+import { guitar } from "./equipment/guitar.js";
+import { drums } from "./equipment/drum.js";
+
+import { computer } from "./equipment/computer.js";
+import { amp } from "./equipment/amp.js";
+
+import { engineer } from "./person/soundEngineer.js";
+import { worker } from "./person/worker.js";
+
+import { bigRoom, smallRoom } from "./room.js";
+import { administrator } from "./person/administrator.js";
 
 export class RecordingStudio {
   constructor(
@@ -90,7 +98,7 @@ export class RecordingStudio {
       this.employees.administrator.work();
       this.employees.administrator.roomRent();
       this.rooms[room].reserveRoom(customer.getFullName.call(customer));
-      customer.takeCash.call(customer, this.rooms[room].roomRentPrice);
+      customer.takeCash(this.rooms[room].roomRentPrice);
       this.addSalary(this.rooms[room].roomRentPrice);
       console.log(`Комната в распоряжении клиента в течении 2х часов`);
     } else {
@@ -118,12 +126,12 @@ export class RecordingStudio {
   }
   songRecording(customer) {
     if (this.checkCustomers()) return;
+
     // Проверка, арендована ли комната данным пользователем.
     for (const key in this.rooms) {
       if (this.rooms[key].customer === customer.getFullName()) {
-        console.log(customer.getFullName());
         console.log(`Клиент ${customer.getFullName()} хочет записать трек.`);
-        customer.takeCash.call(customer, this.recordingPrice);
+        if (!customer.takeCash(this.recordingPrice)) return;
         this.addSalary(this.recordingPrice);
         this.employees.engineer.work();
         this.employees.engineer.turnOnEquip(this.equip.computer.name);
@@ -150,7 +158,7 @@ export class RecordingStudio {
 }
 
 export const bestSound = new RecordingStudio(
-  'Best Sound',
+  "Best Sound",
   engineer,
   administrator,
   worker,
