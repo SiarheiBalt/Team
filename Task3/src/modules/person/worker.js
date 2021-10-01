@@ -2,7 +2,9 @@ import { StudioWorker } from "./studioWorker.js";
 
 class Worker extends StudioWorker {
   roomCleaning() {
-    console.log(`${this.speciality} ${this.getFullName()} убрал в комнате.`);
+    this.logRecord.addLog(
+      `${this.speciality} ${this.getFullName()} убрал в комнате.`
+    );
   }
 }
 

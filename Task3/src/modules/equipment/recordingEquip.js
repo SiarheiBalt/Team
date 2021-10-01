@@ -8,10 +8,10 @@ export class RecordingEquip extends MusicalEquip {
   }
   turnOn() {
     this.isOn = true;
-    console.log(`${this.name} включен.`);
+    this.logRecord.addLog(`${this.name} включен.`);
   }
   turnOf() {
     this.isOn = false;
-    console.log(`${this.name} выключен.`);
+    this.logRecord.addLog(`${this.name} выключен.`);
   }
 }

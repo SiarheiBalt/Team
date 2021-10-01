@@ -12,7 +12,7 @@ export class MusicalInstrument extends MusicalEquip {
     if (this.isFree) {
       this.isFree = false;
       this.customer = customer;
-      console.log(
+      this.logRecord.addLog(
         `Инструмент ${this.name} зарезервирован клиентом - ${customer}`
       );
     } else {
@@ -22,29 +22,29 @@ export class MusicalInstrument extends MusicalEquip {
   }
   returnInstrument(instrument) {
     if (this.customer !== null) {
-      console.log(
+      this.logRecord.addLog(
         `Инструмент ${instrument} возвращен клиентом ${this.customer} `
       );
       this.isFree = true;
       this.customer = null;
     } else {
-      console.log(`Нечего возвращать`);
+      this.logRecord.addLog(`Нечего возвращать`);
     }
   }
   play() {
     this.needTune = true;
-    console.log("Клиент занимается на инструменте.");
+    this.logRecord.addLog("Клиент занимается на инструменте.");
   }
   checkTune() {
     if (this.needTune) {
-      console.log(`Инструмент ${this.name} нуждается в настройке`);
+      this.logRecord.addLog(`Инструмент ${this.name} нуждается в настройке`);
     } else {
-      console.log(`Инструмент в настройке не нуждается.`);
+      this.logRecord.addLog(`Инструмент в настройке не нуждается.`);
     }
     return this.needTune;
   }
   tunning() {
-    console.log(`Инструмент настроен`);
+    this.logRecord.addLog(`Инструмент настроен`);
     this.needTune = false;
   }
 }

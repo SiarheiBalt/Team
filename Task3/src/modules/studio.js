@@ -10,6 +10,8 @@ import { worker } from "./person/worker.js";
 import { bigRoom, smallRoom } from "./room.js";
 import { administrator } from "./person/administrator.js";
 
+import { logRecord } from "./interface.js";
+
 export class RecordingStudio {
   constructor(
     name,
@@ -42,19 +44,24 @@ export class RecordingStudio {
       amp,
     };
     this.recordingPrice = 50;
+    this.logRecord = logRecord;
   }
   inviteCustomer(customer) {
     if (this.customers.some((client) => client === customer.getFullName())) {
-      console.log(`Клиент ${customer.getFullName()} уже находится на студии.`);
+      this.logRecord.addLog(
+        `Клиент ${customer.getFullName()} уже находится на студии.`
+      );
     } else {
-      console.log(`Клиент ${customer.getFullName()} приглашен на студию.`);
       // Записываю приглашенного пользователя в массив
       this.customers = [...this.customers, customer.getFullName()];
+      this.logRecord.addLog(
+        `Клиент ${customer.getFullName()} приглашен на студию.`
+      );
     }
   }
   escortCustomer(customer) {
     if (this.checkCustomers()) return;
-    console.log(`Клиент ${customer.getFullName()} покидает студию.`);
+    this.logRecord.addLog(`Клиент ${customer.getFullName()} покидает студию.`);
     // Удаляю приглашенного пльзователя из массива
     this.customers = this.customers.reduce((acc, client) => {
       if (customer.getFullName() !== client) acc.push(client);
@@ -63,21 +70,19 @@ export class RecordingStudio {
   }
   equipRent(instrument, customer) {
     if (this.checkCustomers()) return;
-    console.log(`Клиент хочет арендовать инструмент ${instrument}`);
+    this.logRecord.addLog(`Клиент хочет арендовать инструмент ${instrument}`);
     this.employees.administrator.work();
     if (this.equip[instrument].isFree) {
-      this.equip[instrument].reserveInstruments(
-        customer.getFullName.call(customer)
-      );
+      this.equip[instrument].reserveInstruments(customer.getFullName(customer));
       customer.takeCash(this.equip[instrument].rentPrice);
       this.employees.administrator.equipRent(instrument);
       this.addSalary(this.equip[instrument].rentPrice);
-      console.log(
+      this.logRecord.addLog(
         `Инструмент ${instrument} в распоряжении клиента в течении 2х часов.`
       );
       this.equip[instrument].play();
     } else {
-      console.log(
+      this.logRecord.addLog(
         `Инструмент ${instrument} в аренде у пользователя - ${this.equip[instrument].customer} `
       );
     }
@@ -100,9 +105,11 @@ export class RecordingStudio {
       this.rooms[room].reserveRoom(customer.getFullName.call(customer));
       customer.takeCash(this.rooms[room].roomRentPrice);
       this.addSalary(this.rooms[room].roomRentPrice);
-      console.log(`Комната в распоряжении клиента в течении 2х часов`);
+      this.logRecord.addLog(
+        `Комната в распоряжении клиента в течении 2х часов`
+      );
     } else {
-      console.log(
+      this.logRecord.addLog(
         `Комната ${this.rooms[room].size} занята клиентом ${this.rooms[room].customer}, смотрите свободна ли другая комната`
       );
     }
@@ -113,24 +120,25 @@ export class RecordingStudio {
   }
   addSalary(cash) {
     this.salary += cash;
-    console.log(`Студия положила в копилку ${cash}р.`);
+    this.logRecord.addLog(`Студия положила в копилку ${cash}р.`);
   }
   leftRoom(room) {
     if (this.rooms[room].isFree) {
-      console.log(`Комната и так свободна.`);
+      this.logRecord.addLog(`Комната и так свободна.`);
     } else {
-      console.log(`Клиент покинул комнату.`);
+      this.logRecord.addLog(`Клиент покинул комнату.`);
       this.employees.worker.roomCleaning();
       this.rooms[room].vacateRoom();
     }
   }
   songRecording(customer) {
     if (this.checkCustomers()) return;
-
     // Проверка, арендована ли комната данным пользователем.
     for (const key in this.rooms) {
       if (this.rooms[key].customer === customer.getFullName()) {
-        console.log(`Клиент ${customer.getFullName()} хочет записать трек.`);
+        this.logRecord.addLog(
+          `Клиент ${customer.getFullName()} хочет записать трек.`
+        );
         if (!customer.takeCash(this.recordingPrice)) return;
         this.addSalary(this.recordingPrice);
         this.employees.engineer.work();
@@ -145,18 +153,19 @@ export class RecordingStudio {
         this.equip.amp.turnOf();
         return;
       } else {
-        console.log(`Арендуйте комнату для записи.`);
+        this.logRecord.addLog(`Арендуйте комнату для записи.`);
         return;
       }
     }
   }
   checkCustomers() {
     // Проверка есть ли на студии клиенты
-    if (this.customers.length === 0) console.log(`На студии клиентов нет`);
+    if (this.customers.length === 0) {
+      this.logRecord.addLog(`На студии клиентов нет`);
+    }
     return this.customers.length === 0;
   }
 }
-
 export const bestSound = new RecordingStudio(
   "Best Sound",
   engineer,

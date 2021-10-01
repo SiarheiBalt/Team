@@ -1,3 +1,5 @@
+import { logRecord } from "./../interface.js";
+
 export class MusicalEquip {
   constructor(color, years, manufacture) {
     this.color = color;
@@ -5,5 +7,6 @@ export class MusicalEquip {
     this.manufacture = manufacture;
     this.isFree = true;
     this.customer = null;
+    this.logRecord = logRecord;
   }
 }

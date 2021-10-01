@@ -1,5 +1,6 @@
 import { firstCustomer, secondCustomer } from "./modules/person/customer.js";
 import { bestSound } from "./modules/studio.js";
+import { logRecord } from "./modules/interface.js";
 
 const instrumentSelect = document.querySelector("#instrumentForm");
 const clientSelect = document.querySelector("#invateForm");
@@ -8,9 +9,26 @@ const clientList = document.querySelector(".studio-content__clients");
 const rooms = document.querySelector(".studio-content__rooms");
 const instruments = document.querySelector(".studio-content__instruments");
 const buttonsContent = document.querySelector(".content__buttons");
+const logContent = document.querySelector(".content-info_log");
 
 const getClient = () =>
   clientSelect.value === "1" ? firstCustomer : secondCustomer;
+
+const addLogContent = () => {
+  const array = logRecord.logs.map((element) => {
+    const li = document.createElement("li");
+    li.textContent = element;
+    return li;
+  });
+  array.forEach((element) => {
+    logContent.append(element);
+  });
+};
+
+const cleanLogContent = () => {
+  logContent.innerHTML = "";
+  logRecord.cleanLogs();
+};
 
 const addContent = () => {
   clientList.textContent = "";
@@ -38,7 +56,9 @@ const addContent = () => {
   }
 };
 
-document.body.addEventListener("click", (event) => {
+buttonsContent.addEventListener("click", (event) => {
+  cleanLogContent();
+
   if (event.target.id === "invite") bestSound.inviteCustomer(getClient());
   if (event.target.id === "roomRent")
     bestSound.roomRent(roomSelect.value, getClient());
@@ -54,6 +74,7 @@ document.body.addEventListener("click", (event) => {
   if (event.target.id === "recordingSong")
     bestSound.songRecording(getClient(), roomSelect.value);
   addContent();
+  addLogContent();
 });
 
 const buttonsArray = [

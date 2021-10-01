@@ -2,14 +2,14 @@ import { StudioWorker } from "./studioWorker.js";
 
 class Administrator extends StudioWorker {
   roomRent() {
-    console.log(
+    this.logRecord.addLog(
       `${
         this.speciality
       } ${this.getFullName()} предоставил(а) в аренду комнату для репетиции.`
     );
   }
   equipRent(equip) {
-    console.log(`${this.speciality} выдал ${equip} клиенту.`);
+    this.logRecord.addLog(`${this.speciality} выдал ${equip} клиенту.`);
   }
 }
 

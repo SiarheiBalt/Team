@@ -7,6 +7,6 @@ export class StudioWorker extends Person {
   }
 
   work() {
-    console.log(`Работник студии начинает работать.`);
+    this.logRecord.addLog(`Работник студии начинает работать.`);
   }
 }

@@ -7,11 +7,11 @@ class Customer extends Person {
   }
   takeCash(cost) {
     if (this.cash - cost < 0) {
-      console.log("Недостаточно средств");
+      this.logRecord.addLog("Недостаточно средств");
       return false;
     } else {
       this.cash -= cost;
-      console.log(
+      this.logRecord.addLog(
         `Клиент ${this.getFullName()} оплатил услугу в размере ${cost}р.`
       );
       return true;
