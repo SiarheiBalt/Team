@@ -10,6 +10,7 @@ const rooms = document.querySelector(".studio-content__rooms");
 const instruments = document.querySelector(".studio-content__instruments");
 const buttonsContent = document.querySelector(".content__buttons");
 const logContent = document.querySelector(".content-info_log");
+const studioSalary = document.querySelector(".studio-salary");
 
 const getClient = () =>
   clientSelect.value === "1" ? firstCustomer : secondCustomer;
@@ -26,11 +27,11 @@ const addLogContent = () => {
 };
 
 const cleanLogContent = () => {
-  logContent.innerHTML = "";
+  logContent.textContent = "";
   logRecord.cleanLogs();
 };
 
-const addContent = () => {
+const addStatus = () => {
   clientList.textContent = "";
   rooms.textContent = "";
   instruments.textContent = "";
@@ -39,6 +40,8 @@ const addContent = () => {
     item.textContent = client;
     clientList.append(item);
   });
+
+  studioSalary.textContent = bestSound.salary;
 
   for (const key in bestSound.rooms) {
     if (bestSound.rooms[key].customer !== null) {
@@ -55,6 +58,7 @@ const addContent = () => {
     }
   }
 };
+addStatus();
 
 buttonsContent.addEventListener("click", (event) => {
   cleanLogContent();
@@ -64,7 +68,7 @@ buttonsContent.addEventListener("click", (event) => {
     bestSound.roomRent(roomSelect.value, getClient());
   if (event.target.id === "leftRoom")
     bestSound.leftRoom(roomSelect.value, getClient());
-  if (event.target.id === "leftStudio") bestSound.escortCustomer(getClient());
+  if (event.target.id === "leftStudio") bestSound.removeCustomer(getClient());
   if (event.target.id === "equipRent")
     bestSound.equipRent(instrumentSelect.value, getClient());
   if (event.target.id === "returnEquip")
@@ -73,7 +77,7 @@ buttonsContent.addEventListener("click", (event) => {
     bestSound.checkInstrument(instrumentSelect.value);
   if (event.target.id === "recordingSong")
     bestSound.songRecording(getClient(), roomSelect.value);
-  addContent();
+  addStatus();
   addLogContent();
 });
 

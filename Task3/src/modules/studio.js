@@ -59,7 +59,7 @@ export class RecordingStudio {
       );
     }
   }
-  escortCustomer(customer) {
+  removeCustomer(customer) {
     if (this.checkCustomers()) return;
     this.logRecord.addLog(`Клиент ${customer.getFullName()} покидает студию.`);
     // Удаляю приглашенного пльзователя из массива
