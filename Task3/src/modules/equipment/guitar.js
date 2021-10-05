@@ -1,10 +1,9 @@
-import { MusicalInstrument } from "./musicalInstrument.js";
+import MusicalInstrument from "./musicalInstrument.js";
 
-class Guitar extends MusicalInstrument {
-  constructor(color, years, manufacture, rentPrice, name, numberOfStrings) {
-    super(color, years, manufacture, rentPrice, name);
+export default class Guitar extends MusicalInstrument {
+  constructor(color, years, manufacture, rentPrice, numberOfStrings) {
+    super(color, years, manufacture, rentPrice);
     this.numberOfStrings = numberOfStrings;
+    this.name = "гитара";
   }
 }
-
-export const guitar = new Guitar("black", 2000, "Japan", 15, "гитара", 6);

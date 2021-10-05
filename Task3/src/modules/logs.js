@@ -1,4 +1,4 @@
-class Logs {
+export default class Logs {
   constructor(state = []) {
     this.state = state;
   }
@@ -6,4 +6,3 @@ class Logs {
     this.state = changes;
   }
 }
-export const logs = new Logs();

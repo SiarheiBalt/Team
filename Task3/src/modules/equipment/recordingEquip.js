@@ -1,10 +1,9 @@
-import { MusicalEquip } from "./musicalEquip.js";
+import MusicalEquip from "./musicalEquip.js";
 
-export class RecordingEquip extends MusicalEquip {
-  constructor(color, years, manufacture, name) {
+export default class RecordingEquip extends MusicalEquip {
+  constructor(color, years, manufacture) {
     super(color, years, manufacture);
-    this.isOn = false;
-    this.name = name;
+    this.isOn = this.turnOf();
   }
   turnOn() {
     this.isOn = true;

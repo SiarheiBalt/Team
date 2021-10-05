@@ -1,6 +1,6 @@
 import { logRecord } from "./../interface.js";
 
-export class MusicalEquip {
+export default class MusicalEquip {
   constructor(color, years, manufacture) {
     this.color = color;
     this.productionYears = years;

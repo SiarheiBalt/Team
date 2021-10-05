@@ -1,10 +1,9 @@
-import { MusicalEquip } from "./musicalEquip.js";
+import MusicalEquip from "./musicalEquip.js";
 
-export class MusicalInstrument extends MusicalEquip {
-  constructor(color, years, manufacture, rentPrice, name) {
+export default class MusicalInstrument extends MusicalEquip {
+  constructor(color, years, manufacture, rentPrice) {
     super(color, years, manufacture);
     this.rentPrice = rentPrice;
-    this.name = name;
     this.needTune = false;
   }
 
@@ -15,8 +14,6 @@ export class MusicalInstrument extends MusicalEquip {
       this.logRecord.addLog(
         `Инструмент ${this.name} зарезервирован клиентом - ${customer}`
       );
-    } else {
-      `Инструмент ${this.name} зарезервирован клиентом ${this.customer}`;
     }
     return this.isFree;
   }

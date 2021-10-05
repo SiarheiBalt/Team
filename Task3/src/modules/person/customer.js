@@ -1,6 +1,6 @@
-import { Person } from "./person.js";
+import Person from "./person.js";
 
-class Customer extends Person {
+export default class Customer extends Person {
   constructor(firstName, lastName, cash) {
     super(firstName, lastName);
     this.cash = cash;
@@ -21,6 +21,3 @@ class Customer extends Person {
     return this.cash;
   }
 }
-
-export const firstCustomer = new Customer("Григорий", "Хомич", 100);
-export const secondCustomer = new Customer("Денис", "Иванов", 50);

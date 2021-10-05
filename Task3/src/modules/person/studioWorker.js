@@ -1,11 +1,6 @@
-import { Person } from "./person.js";
+import Person from "./person.js";
 
-export class StudioWorker extends Person {
-  constructor(firstName, lastName, speciality) {
-    super(firstName, lastName);
-    this.speciality = speciality;
-  }
-
+export default class StudioWorker extends Person {
   work() {
     this.logRecord.addLog(`Работник студии начинает работать.`);
   }

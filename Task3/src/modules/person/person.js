@@ -1,6 +1,6 @@
 import { logRecord } from "./../interface.js";
 
-export class Person {
+export default class Person {
   constructor(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;

@@ -1,16 +1,23 @@
-import { guitar } from "./equipment/guitar.js";
-import { drums } from "./equipment/drum.js";
-
-import { computer } from "./equipment/computer.js";
-import { amp } from "./equipment/amp.js";
-
-import { engineer } from "./person/soundEngineer.js";
-import { worker } from "./person/worker.js";
-
-import { bigRoom, smallRoom } from "./room.js";
-import { administrator } from "./person/administrator.js";
+import Guitar from "./equipment/guitar.js";
+import Drums from "./equipment/drum.js";
+import Computer from "./equipment/computer.js";
+import Amp from "./equipment/amp.js";
+import Room from "./room.js";
+import SoundEngineer from "./person/soundEngineer.js";
+import Worker from "./person/worker.js";
+import Administrator from "./person/administrator.js";
 
 import { logRecord } from "./interface.js";
+
+const guitar = new Guitar("black", 2000, "Japan", 15, 6);
+const drums = new Drums("White", 2013, "China", 30, 5);
+const amp = new Amp("black", "Marshall", 1995);
+const computer = new Computer("white", "Integrall", 2019);
+const bigRoom = new Room("big", 25);
+const smallRoom = new Room("small", 20);
+const engineer = new SoundEngineer("Денис", "Петров");
+const worker = new Worker("Костя", "Рыбик");
+const administrator = new Administrator("Елена", "Денисова");
 
 export class RecordingStudio {
   constructor(
@@ -63,19 +70,20 @@ export class RecordingStudio {
     if (this.checkCustomers()) return;
     this.logRecord.addLog(`Клиент ${customer.getFullName()} покидает студию.`);
     // Удаляю приглашенного пльзователя из массива
-    this.customers = this.customers.reduce((acc, client) => {
-      if (customer.getFullName() !== client) acc.push(client);
-      return acc;
-    }, []);
+    this.customers = this.customers.filter(
+      (element) => customer.getFullName() !== element
+    );
   }
   equipRent(instrument, customer) {
     if (this.checkCustomers()) return;
     this.logRecord.addLog(`Клиент хочет арендовать инструмент ${instrument}`);
     this.employees.administrator.work();
     if (this.equip[instrument].isFree) {
-      this.equip[instrument].reserveInstruments(customer.getFullName(customer));
       customer.takeCash(this.equip[instrument].rentPrice);
-      this.employees.administrator.equipRent(instrument);
+      this.employees.administrator.equipRent(
+        this.equip[instrument],
+        customer.getFullName(customer)
+      ); //
       this.addSalary(this.equip[instrument].rentPrice);
       this.logRecord.addLog(
         `Инструмент ${instrument} в распоряжении клиента в течении 2х часов.`
@@ -100,9 +108,7 @@ export class RecordingStudio {
   roomRent(room, customer) {
     if (this.checkCustomers()) return;
     if (this.rooms[room].isFree) {
-      this.employees.administrator.work();
-      this.employees.administrator.roomRent();
-      this.rooms[room].reserveRoom(customer.getFullName.call(customer));
+      this.employees.administrator.roomRent(this.rooms[room], customer);
       customer.takeCash(this.rooms[room].roomRentPrice);
       this.addSalary(this.rooms[room].roomRentPrice);
       this.logRecord.addLog(
@@ -141,16 +147,10 @@ export class RecordingStudio {
         );
         if (!customer.takeCash(this.recordingPrice)) return;
         this.addSalary(this.recordingPrice);
-        this.employees.engineer.work();
-        this.employees.engineer.turnOnEquip(this.equip.computer.name);
-        this.equip.computer.turnOn();
-        this.employees.engineer.turnOnEquip(this.equip.amp.name);
-        this.equip.amp.turnOn();
-        this.employees.engineer.recordingSong();
-        this.employees.engineer.turnOfEquip(this.equip.computer.name);
-        this.equip.computer.turnOf();
-        this.employees.engineer.turnOfEquip(this.equip.amp.name);
-        this.equip.amp.turnOf();
+        this.employees.engineer.recordingSong(
+          this.equip.computer,
+          this.equip.amp
+        );
         return;
       } else {
         this.logRecord.addLog(`Арендуйте комнату для записи.`);

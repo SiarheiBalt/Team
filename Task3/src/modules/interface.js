@@ -1,4 +1,6 @@
-import { logs } from './logs.js';
+import Logs from "./../modules/logs.js";
+
+export const logs = new Logs();
 
 class Interface {
   constructor() {

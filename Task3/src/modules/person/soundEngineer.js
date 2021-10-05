@@ -1,6 +1,7 @@
-import { StudioWorker } from "./studioWorker.js";
+import StudioWorker from "./studioWorker.js";
 
-class SoundEngineer extends StudioWorker {
+export default class SoundEngineer extends StudioWorker {
+  speciality = "Инженер";
   checkInstrument(instrument) {
     this.logRecord.addLog(`Инженер проверяет инструмент ${instrument}`);
   }
@@ -13,9 +14,16 @@ class SoundEngineer extends StudioWorker {
   turnOfEquip(equip) {
     this.logRecord.addLog(`Инженер выключил ${equip}.`);
   }
-  recordingSong() {
+  recordingSong(computer, amp) {
+    this.work();
+    this.turnOnEquip(computer.name);
+    computer.turnOn();
+    this.turnOnEquip(amp.name);
+    amp.turnOn();
     this.logRecord.addLog(`Инженер записал трек, предоставил его клиенту.`);
+    this.turnOfEquip(computer.name);
+    computer.turnOf();
+    this.turnOfEquip(amp.name);
+    amp.turnOf();
   }
 }
-
-export const engineer = new SoundEngineer("Денис", "Петров", "Инженер");
