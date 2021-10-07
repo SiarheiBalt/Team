@@ -19,6 +19,19 @@ const engineer = new SoundEngineer("Денис", "Петров");
 const worker = new Worker("Костя", "Рыбик");
 const administrator = new Administrator("Елена", "Денисова");
 
+// Функция декоратор добавляет новый функционал
+function cleaning(room) {
+  room.isClean = true;
+  room.cleaning = function () {
+    room.isClean = true;
+  };
+  room.useRoom = function () {
+    room.cleaning = false;
+  };
+  return room;
+}
+const cleanRoom = cleaning(bigRoom);
+
 export class RecordingStudio {
   constructor(
     name,
@@ -178,3 +191,65 @@ export const bestSound = new RecordingStudio(
   computer,
   amp
 );
+
+export default class BuildStudio {
+  createStudio(name, inviteMethod, removeMethod) {
+    this.name = name;
+    this.salary = 0;
+    this.inviteCustomer = inviteMethod;
+    this.removeCustomer = removeMethod;
+  }
+  addRoom(room) {
+    if (!this.rooms) this.rooms = {};
+    this.rooms[room.size] = room;
+  }
+  addRoomMethods(roomRent, leftRoom) {
+    this.roomRent = roomRent;
+    this.leftRoom = leftRoom;
+  }
+  addEmploye(employe) {
+    if (!this.employees) this.employees = {};
+    this.employees[employe.name] = employe;
+  }
+  addEmployeesMethods(equipRent, returnEquip, checkInstrument, roomRent) {
+    this.equipRent = equipRent;
+    this.returnEquip = returnEquip;
+    this.checkInstrument = checkInstrument;
+    this.roomRent = roomRent;
+  }
+  addEquip(equip) {
+    if (!this.equip) this.equip = {};
+    this.equip[equip.type] = equip;
+  }
+}
+
+const studio = new BuildStudio();
+
+studio.createStudio(
+  "studioStars",
+  bestSound.inviteCustomer,
+  bestSound.removeCustomer
+);
+// Отдельно добавляю комнаты
+studio.addRoom(bigRoom);
+studio.addRoom(smallRoom);
+
+// Методы для комнаты
+studio.addRoomMethods(bestSound.roomRent, bestSound.leftRoom);
+
+// Добавляю сотрудников
+studio.addEmploye(administrator);
+studio.addEmploye(engineer);
+
+// Методы для сотрудников
+studio.addEmployeesMethods(
+  bestSound.equipRent,
+  bestSound.returnEquip,
+  bestSound.checkInstrument,
+  bestSound.roomRent
+);
+
+// Добавил инструмент
+studio.addEquip(guitar);
+
+console.log(studio);

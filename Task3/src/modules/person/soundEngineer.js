@@ -2,6 +2,7 @@ import StudioWorker from "./studioWorker.js";
 
 export default class SoundEngineer extends StudioWorker {
   speciality = "Инженер";
+  name = "engineer";
   checkInstrument(instrument) {
     this.logRecord.addLog(`Инженер проверяет инструмент ${instrument}`);
   }

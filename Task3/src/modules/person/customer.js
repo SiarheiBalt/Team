@@ -6,7 +6,8 @@ export default class Customer extends Person {
     this.cash = cash;
   }
   takeCash(cost) {
-    if (this.cash - cost < 0) {
+    const cashBalance = this.cash - cost;
+    if (cashBalance < 0) {
       this.logRecord.addLog("Недостаточно средств");
       return false;
     } else {

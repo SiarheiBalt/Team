@@ -2,6 +2,7 @@ import StudioWorker from "./studioWorker.js";
 
 export default class Administrator extends StudioWorker {
   speciality = "Администратор";
+  name = "administrator";
   roomRent(room, customer) {
     this.work();
     this.logRecord.addLog(

@@ -5,5 +5,6 @@ export default class Guitar extends MusicalInstrument {
     super(color, years, manufacture, rentPrice);
     this.numberOfStrings = numberOfStrings;
     this.name = "гитара";
+    this.type = "guitar";
   }
 }

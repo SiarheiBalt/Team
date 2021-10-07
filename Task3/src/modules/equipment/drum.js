@@ -5,5 +5,6 @@ export default class Drums extends MusicalInstrument {
     super(color, years, manufacture, rentPrice);
     this.numberOfDrums = numberOfDrums;
     this.name = "барабаны";
+    this.type = "drums";
   }
 }
