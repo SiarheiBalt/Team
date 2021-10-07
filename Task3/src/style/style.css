@@ -1,0 +1,28 @@
+.container-content {
+  width: 1200px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+.button {
+  width: 200px;
+  height: 50px;
+  margin: 0 5px;
+}
+.form {
+  width: 70%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content__buttons {
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+.studio {
+  width: 600px;
+}
+.content-info {
+  display: flex;
+}
